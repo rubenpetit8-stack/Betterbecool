@@ -1,0 +1,57 @@
+{
+  "_comment": "EDIT ME FIRST. Everything here appears across every page of the site. The phone/mobile numbers below are Ofcom's official 'drama' numbers, reserved so they can never reach a real person - replace them before launch.",
+
+  "name": "CoolAir London",
+  "legalName": "CoolAir London Ltd",
+  "tagline": "Air conditioning installed properly, across London",
+  "description": "F-Gas certified air conditioning installation for London homes and businesses. Fixed written quotes, guide prices published up front, most single-room systems fitted in a day.",
+
+  "domain": "https://www.coolairlondon.co.uk",
+
+  "phone": "020 7946 0123",
+  "phoneHref": "+442079460123",
+  "whatsapp": "447700900123",
+  "email": "hello@coolairlondon.co.uk",
+
+  "address": {
+    "street": "Unit 4, Bessemer Park, 250 Milkwood Road",
+    "locality": "London",
+    "region": "Greater London",
+    "postcode": "SE24 0HG",
+    "country": "GB",
+    "latitude": 51.4543,
+    "longitude": -0.1029
+  },
+
+  "hours": [
+    { "days": "Monday to Friday", "open": "07:30", "close": "18:00" },
+    { "days": "Saturday", "open": "08:00", "close": "14:00" }
+  ],
+  "hoursNote": "Emergency cover for business systems 24/7",
+
+  "credentials": [
+    { "label": "F-Gas certified", "detail": "Every engineer holds C&G 2079 - a legal requirement to handle refrigerant in the UK." },
+    { "label": "REFCOM registered", "detail": "Company registration for refrigerant handling and record keeping." },
+    { "label": "Part P electrical", "detail": "Our own electricians do the circuit work and self-certify it." },
+    { "label": "£5m public liability", "detail": "Fully insured, with employers' liability cover for our engineers." },
+    { "label": "Manufacturer approved", "detail": "Daikin, Mitsubishi Electric, Panasonic and LG trained and warranty-approved." },
+    { "label": "Free written quotes", "detail": "Surveyed, itemised and fixed. No pressure, no obligation, no charge." }
+  ],
+
+  "brands": ["Daikin", "Mitsubishi Electric", "Panasonic", "LG", "Toshiba", "Samsung"],
+
+  "social": {
+    "google": "",
+    "facebook": "",
+    "instagram": "",
+    "linkedin": ""
+  },
+
+  "nav": [
+    { "label": "What it costs", "href": "/pricing.html" },
+    { "label": "Areas we cover", "href": "/areas.html" },
+    { "label": "How it works", "href": "/index.html#process" },
+    { "label": "Questions", "href": "/index.html#faq" },
+    { "label": "Contact", "href": "/contact.html" }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "_comment": "Each entry generates its own page at /areas/<slug>.html and its own sitemap entry. Keep the copy genuinely different between areas - near-identical local pages get ignored by Google and read badly to customers. Each note needs a title and a body. 'popular' references item ids in services.json.",
+  "areas": [
+    {
+      "slug": "clapham-battersea",
+      "name": "Clapham & Battersea",
+      "postcodes": [
+        "SW4",
+        "SW8",
+        "SW11",
+        "SW12"
+      ],
+      "intro": "Most of what we fit around Clapham Common and up towards Battersea goes into Victorian terraces - two bedrooms upstairs that bake under an uninsulated slate roof, and a knocked-through kitchen-diner that turns into a greenhouse by mid-afternoon.",
+      "property": "Victorian and Edwardian terraces, plus new-build flats around Battersea Power Station and Nine Elms.",
+      "notes": [
+        {
+          "title": "Where the outdoor unit goes",
+          "body": "In a standard terrace the outdoor unit almost always goes on the rear elevation at first-floor level, above the kitchen extension roof, where it is invisible from the street and the pipe run to both bedrooms stays short."
+        },
+        {
+          "title": "Sizing for knocked-through kitchens",
+          "body": "Kitchen-diner extensions with big roof lights routinely need 5.0 kW rather than 3.5 kW. We calculate it rather than guessing - a unit that is too small runs flat out and never gets there."
+        },
+        {
+          "title": "Flats and managing agents",
+          "body": "Flats in the Nine Elms and Power Station developments usually need written freeholder or managing agent consent before anything is fixed to the facade. We will give you the drawings and specification to submit."
+        }
+      ],
+      "popular": [
+        "split-35",
+        "multi-2",
+        "multi-3"
+      ]
+    },
+    {
+      "slug": "islington-north-london",
+      "name": "Islington & North London",
+      "postcodes": [
+        "N1",
+        "N5",
+        "N7",
+        "N19",
+        "EC1"
+      ],
+      "intro": "Islington is conservation-area territory almost everywhere, and Georgian and early Victorian stock does not take kindly to a condenser bolted to the front. Nearly every job here is a conversation about where the outdoor unit can legitimately go.",
+      "property": "Georgian and early Victorian townhouses, canal-side conversions, and a lot of listed and locally listed frontage.",
+      "notes": [
+        {
+          "title": "Conservation areas rule out the front",
+          "body": "Front elevations are effectively off-limits in the conservation areas around Barnsbury, Canonbury and Duncan Terrace. Rear lightwells, flat roofs and garden-level positions are what we work with."
+        },
+        {
+          "title": "Listed buildings: concealed or console",
+          "body": "In a listed building we usually end up with a ducted system in the ceiling void, or a floor console under the window, so that nothing is fixed through a period cornice or an original shutter box."
+        },
+        {
+          "title": "Applications to Islington Council",
+          "body": "We prepare the drawing pack for Islington Council applications as a fixed-price extra, and we will tell you honestly before you spend anything if we think an application is unlikely to succeed."
+        }
+      ],
+      "popular": [
+        "ducted-zone",
+        "console-35",
+        "multi-2"
+      ]
+    },
+    {
+      "slug": "kensington-chelsea",
+      "name": "Kensington & Chelsea",
+      "postcodes": [
+        "SW3",
+        "SW5",
+        "SW7",
+        "SW10",
+        "W8",
+        "W11"
+      ],
+      "intro": "In RBKC the planning bar is the highest in London, and the interiors are the least forgiving. Almost everything we install here is concealed - the brief is usually that the client should not be able to tell the room is air conditioned by looking at it.",
+      "property": "Listed stucco terraces, mansion blocks, mews houses and deep basement extensions.",
+      "notes": [
+        {
+          "title": "Basements need cooling year-round",
+          "body": "Basement extensions are our single most common job in the borough. They have no natural ventilation and no meaningful heat loss, so they need cooling year-round, and a ducted fan coil in the ceiling void is usually the only acceptable answer."
+        },
+        {
+          "title": "Mansion blocks and freeholder consent",
+          "body": "Mansion blocks nearly always require freeholder consent and a licence for alterations. Budget several weeks for that before installation, and start it early."
+        },
+        {
+          "title": "Acoustics and RBKC planning",
+          "body": "RBKC will often ask for a BS 4142 acoustic assessment where a condenser sits near a neighbouring window. We can commission one, and we will position the unit to pass it rather than hoping."
+        }
+      ],
+      "popular": [
+        "ducted-zone",
+        "cassette-home",
+        "multi-3"
+      ]
+    },
+    {
+      "slug": "richmond-twickenham",
+      "name": "Richmond & Twickenham",
+      "postcodes": [
+        "TW1",
+        "TW2",
+        "TW9",
+        "TW10",
+        "TW11"
+      ],
+      "intro": "More space, bigger houses and gardens to put a condenser in - Richmond and Twickenham jobs tend to be whole-house rather than a single room, and the outdoor unit usually goes at ground level behind planting rather than up a wall.",
+      "property": "Detached and semi-detached family homes, riverside conversions, garden rooms and home offices.",
+      "notes": [
+        {
+          "title": "Ground-mounted, behind planting",
+          "body": "Ground-mounted condensers on anti-vibration feet are the norm here. They are quieter to live with than a wall-mounted unit, easier to service, and there is no drilling through a finished elevation."
+        },
+        {
+          "title": "Garden rooms and outbuildings",
+          "body": "Garden rooms and converted outbuildings are a steady part of our work in TW - a single 2.5 kW system makes a garden office usable in both August and January."
+        },
+        {
+          "title": "Conservation and the Thames Policy Area",
+          "body": "Parts of Richmond sit inside conservation areas and the Thames Policy Area, so we check the constraints on your specific address before quoting rather than after."
+        }
+      ],
+      "popular": [
+        "multi-3",
+        "multi-4",
+        "split-25"
+      ]
+    },
+    {
+      "slug": "canary-wharf-docklands",
+      "name": "Canary Wharf & Docklands",
+      "postcodes": [
+        "E14",
+        "E16",
+        "SE10",
+        "SE16"
+      ],
+      "intro": "Docklands apartments are sealed, heavily glazed and often south or west facing, which makes them the hottest homes in London by a distance. They are also the most restricted - what you can install is usually decided by the building, not by you.",
+      "property": "High-rise apartments, warehouse conversions and managed developments with strict facade rules.",
+      "notes": [
+        {
+          "title": "What your building will allow",
+          "body": "Most towers prohibit any condenser on the balcony or facade. Where that is the case, the realistic options are a self-contained water-cooled unit tied into the building's system, or a portable - and we will tell you plainly which applies to your block."
+        },
+        {
+          "title": "Balcony installs come with conditions",
+          "body": "Where balcony installation is permitted, it nearly always comes with conditions on position, noise limits and screening. We install to those conditions and give you the commissioning paperwork the managing agent will ask for."
+        },
+        {
+          "title": "Condensate pumps are near-certain",
+          "body": "Condensate almost never drains under gravity in a flat, so a condensate pump is a near-certain extra here. We include it in the quote rather than raising it on the day."
+        }
+      ],
+      "popular": [
+        "split-25",
+        "split-35",
+        "multi-2"
+      ]
+    },
+    {
+      "slug": "shoreditch-hackney",
+      "name": "Shoreditch & Hackney",
+      "postcodes": [
+        "E1",
+        "E2",
+        "E5",
+        "E8",
+        "E9",
+        "N16"
+      ],
+      "intro": "Warehouse conversions with five-metre ceilings and single-glazed steel windows are wonderful to live in and very hard to keep cool. Add the number of people now working from home in E8 and E2 full-time, and cooling has stopped being a luxury here.",
+      "property": "Warehouse and factory conversions, Victorian terraces, and a heavy concentration of home offices and small studios.",
+      "notes": [
+        {
+          "title": "High ceilings change the sizing",
+          "body": "High ceilings change the sizing completely. A room that would take a 3.5 kW unit with a standard ceiling often needs 5.0 kW at warehouse height, because you are conditioning far more air volume."
+        },
+        {
+          "title": "Exposed brick means visible pipework",
+          "body": "Exposed brick and steel structures usually mean surface-run pipework. We run it deliberately, in painted trunking on a chosen line, so it reads as part of the building rather than an afterthought."
+        },
+        {
+          "title": "Studios and workshops",
+          "body": "We do a lot of small studio and workshop installations across Hackney - priced as business work, excluding VAT, and installed outside your opening hours where that matters."
+        }
+      ],
+      "popular": [
+        "split-50",
+        "cassette-home",
+        "comm-cassette"
+      ]
+    },
+    {
+      "slug": "wimbledon-putney",
+      "name": "Wimbledon & Putney",
+      "postcodes": [
+        "SW15",
+        "SW18",
+        "SW19",
+        "SW20"
+      ],
+      "intro": "Family houses with converted lofts, which is the specific problem we solve most often in SW19. A loft bedroom under a black membrane roof can sit ten degrees above the rest of the house, and no amount of window-opening fixes it.",
+      "property": "Edwardian and 1930s family homes, loft conversions, and larger detached houses towards the Village.",
+      "notes": [
+        {
+          "title": "Loft rooms with no usable wall",
+          "body": "Loft bedrooms with sloped ceilings frequently have no wall tall enough for a standard high-wall unit. A floor console under the dormer window is usually the neat answer."
+        },
+        {
+          "title": "Fit ducted while the ceiling is open",
+          "body": "A loft conversion is the ideal moment to fit ducted - while the ceilings are open, the cost of concealing the whole thing is a fraction of retrofitting it later."
+        },
+        {
+          "title": "Conservation areas near the Common",
+          "body": "Parts of Wimbledon Village and the Common sit within conservation areas, which affects where a condenser can be seen from. We check that at survey."
+        }
+      ],
+      "popular": [
+        "console-35",
+        "split-35",
+        "ducted-zone"
+      ]
+    },
+    {
+      "slug": "hampstead-camden",
+      "name": "Hampstead & Camden",
+      "postcodes": [
+        "NW1",
+        "NW3",
+        "NW5",
+        "NW6",
+        "NW8"
+      ],
+      "intro": "Hampstead and Camden combine period property, tight conservation control and some of the largest houses we work in. Jobs here are typically multi-room, planned carefully, and installed with an eye on what the neighbours will hear.",
+      "property": "Large period houses, mansion flats, and a significant number of listed and locally listed buildings.",
+      "notes": [
+        {
+          "title": "Camden's rules on external plant",
+          "body": "Camden applies its planning policy on external plant strictly, particularly in the Hampstead, Fitzjohns and Primrose Hill conservation areas. A multi-split with one condenser instead of four separate systems is often what makes an application viable."
+        },
+        {
+          "title": "Lightwells and extension roofs",
+          "body": "Where a house has a lightwell or a flat roof over a rear extension, that is nearly always the right home for the outdoor unit - screened, set on anti-vibration mounts, and positioned away from a neighbouring boundary."
+        },
+        {
+          "title": "Listed buildings and your architect",
+          "body": "For listed buildings we work with your architect or heritage consultant from the start rather than turning up with a fixed idea."
+        }
+      ],
+      "popular": [
+        "multi-3",
+        "multi-4",
+        "ducted-zone"
+      ]
+    },
+    {
+      "slug": "ealing-west-london",
+      "name": "Ealing & West London",
+      "postcodes": [
+        "W3",
+        "W4",
+        "W5",
+        "W7",
+        "W13",
+        "UB1"
+      ],
+      "intro": "West London is 1930s semi country - solid, generous houses with south-facing rear gardens, wide side returns and, since the Heathrow flight paths make sleeping with the windows open unappealing, a strong reason to cool bedrooms properly.",
+      "property": "1930s semi-detached and detached houses, mansion blocks along the Uxbridge Road, and Chiswick's Victorian terraces.",
+      "notes": [
+        {
+          "title": "The side return is close to ideal",
+          "body": "The side return on a 1930s semi is close to ideal for a condenser: out of sight, easy to service, and short pipe runs up to the bedrooms above."
+        },
+        {
+          "title": "Sizing for windows that stay shut",
+          "body": "Under a flight path, cooling means you can keep the windows shut in July. We size for closed windows, which is a different calculation from the one most quotes are based on."
+        },
+        {
+          "title": "Chiswick's conservation areas",
+          "body": "Chiswick has extensive conservation coverage around Bedford Park and the riverside - we treat those addresses the same way we treat Islington."
+        }
+      ],
+      "popular": [
+        "multi-2",
+        "multi-3",
+        "split-25"
+      ]
+    },
+    {
+      "slug": "city-of-london-offices",
+      "name": "The City & Central London offices",
+      "postcodes": [
+        "EC1",
+        "EC2",
+        "EC3",
+        "EC4",
+        "WC1",
+        "WC2",
+        "W1"
+      ],
+      "intro": "Commercial work in central London: office fit-outs, meeting-room retrofits, server and comms rooms, and the statutory inspections that come with running a system over 12 kW. Almost all of it happens outside working hours.",
+      "property": "Office floors, serviced suites, retail units, salons, restaurants and basement server rooms.",
+      "notes": [
+        {
+          "title": "Out of hours, at no premium",
+          "body": "We work evenings, weekends and building shutdown periods at no premium on planned work. Noise, access, permits and lift bookings are handled as part of the job."
+        },
+        {
+          "title": "Server and comms rooms",
+          "body": "Server and comms rooms get continuous-duty units with a volt-free alarm contact, and we will quote an N+1 pair where the room genuinely cannot go down."
+        },
+        {
+          "title": "TM44 inspections",
+          "body": "Any air conditioning system over 12 kW legally needs a TM44 inspection every five years. If yours is out of date, that is a straightforward fix and we can lodge the report for you."
+        }
+      ],
+      "popular": [
+        "comm-cassette",
+        "server-room",
+        "vrf",
+        "tm44"
+      ]
+    }
+  ],
+  "alsoCover": [
+    "Croydon",
+    "Bromley",
+    "Greenwich",
+    "Lewisham",
+    "Dulwich",
+    "Brixton",
+    "Fulham",
+    "Hammersmith",
+    "Notting Hill",
+    "Marylebone",
+    "Highgate",
+    "Crouch End",
+    "Stoke Newington",
+    "Walthamstow",
+    "Barnes",
+    "Kingston",
+    "Surbiton",
+    "Kew",
+    "Acton",
+    "Harrow",
+    "Finchley",
+    "Enfield",
+    "Ilford",
+    "Stratford",
+    "Bermondsey",
+    "Clerkenwell",
+    "Pimlico",
+    "Wandsworth",
+    "Balham",
+    "Streatham"
+  ]
+}

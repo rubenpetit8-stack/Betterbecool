@@ -1,0 +1,236 @@
+{
+  "_comment": "The itemised catalogue. Drives the pricing page, the quote builder and the structured data Google reads. Prices are GUIDE 'from' prices in GBP including VAT for homes. Set \"poa\": true instead of \"from\" for anything priced on survey.",
+
+  "vatNote": "All home prices include VAT at 20%. Business prices are shown excluding VAT.",
+  "guideNote": "These are genuine starting prices for a standard installation, not teasers. Your fixed price is confirmed in writing after a free survey - it only moves if your property needs something on the extras list below.",
+
+  "includedInEvery": [
+    "Free site survey and a fixed written quote before anything is booked",
+    "Heat-load calculation so the unit is sized to the room, not guessed",
+    "Supply of the indoor and outdoor units from a manufacturer-approved range",
+    "Up to 5 metres of insulated refrigerant pipework, drain and interconnecting cable",
+    "Core drilling, wall brackets and anti-vibration mounts for the outdoor unit",
+    "Connection to an existing suitable circuit, pressure test, vacuum and commissioning",
+    "F-Gas records, commissioning certificate and a walkthrough of the controls",
+    "Dust sheets, floor protection and all waste taken away",
+    "Manufacturer warranty registered in your name, plus our 2-year workmanship guarantee"
+  ],
+
+  "groups": [
+    {
+      "id": "single-room",
+      "title": "One room, one system",
+      "blurb": "A single indoor unit paired with one outdoor condenser. The standard choice for a bedroom, a home office or a single living room. Every one of these both cools in summer and heats in winter.",
+      "items": [
+        {
+          "id": "split-25",
+          "name": "2.5 kW wall-mounted split",
+          "spec": "Bedrooms, home offices and rooms up to about 20 m²",
+          "from": 1895,
+          "unitLabel": "per system, fitted",
+          "popular": true,
+          "includes": [
+            "One slim wall-mounted indoor unit and one outdoor condenser",
+            "Cooling in summer, heat-pump heating in winter",
+            "Quiet-mode running from around 19 dB indoors",
+            "Handset and wall bracket; app control available as an extra"
+          ]
+        },
+        {
+          "id": "split-35",
+          "name": "3.5 kW wall-mounted split",
+          "spec": "Living rooms and open-plan spaces up to about 30 m²",
+          "from": 2195,
+          "unitLabel": "per system, fitted",
+          "popular": true,
+          "includes": [
+            "The most-fitted size in London terraced and semi-detached homes",
+            "Handles a knocked-through kitchen-diner or a large main bedroom",
+            "Cooling and heating, with a typical running cost around 20-25p an hour",
+            "A++ or better seasonal efficiency on the ranges we fit"
+          ]
+        },
+        {
+          "id": "split-50",
+          "name": "5.0 kW wall-mounted split",
+          "spec": "Large, glazed or south-facing open-plan rooms up to about 45 m²",
+          "from": 2595,
+          "unitLabel": "per system, fitted",
+          "includes": [
+            "Sized for rooms with big glazing, roof lights or a west-facing wall",
+            "Larger outdoor unit - we check the position and noise limits on survey",
+            "Cooling and heating from one system"
+          ]
+        },
+        {
+          "id": "console-35",
+          "name": "3.5 kW floor console",
+          "spec": "Under a window or in a dormer, where there is no usable wall",
+          "from": 2395,
+          "unitLabel": "per system, fitted",
+          "includes": [
+            "Sits at skirting height rather than high on the wall",
+            "The usual answer in period rooms with cornicing, or loft bedrooms with sloped ceilings",
+            "Blows warm air at floor level in winter, which suits it to heating"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "multi-room",
+      "title": "Several rooms, one outdoor unit",
+      "blurb": "A multi-split runs two to five indoor units from a single outdoor condenser. It costs less than the same number of separate systems, and - more importantly in London - it means one box outside instead of four.",
+      "items": [
+        {
+          "id": "multi-2",
+          "name": "Twin multi-split - 2 rooms",
+          "spec": "Two indoor units, one outdoor condenser",
+          "from": 3450,
+          "unitLabel": "fitted",
+          "popular": true,
+          "includes": [
+            "Typically two bedrooms, or a bedroom and a living room",
+            "Each room sized and controlled independently",
+            "One outdoor unit - usually the deciding factor in a flat or a conservation area"
+          ]
+        },
+        {
+          "id": "multi-3",
+          "name": "Triple multi-split - 3 rooms",
+          "spec": "Three indoor units, one outdoor condenser",
+          "from": 4750,
+          "unitLabel": "fitted",
+          "includes": [
+            "The common whole-upstairs solution in a three-bed terrace",
+            "Mix of wall units and floor consoles if the rooms need it",
+            "Two-day installation in most homes"
+          ]
+        },
+        {
+          "id": "multi-4",
+          "name": "Quad multi-split - 4 rooms",
+          "spec": "Four indoor units, one outdoor condenser",
+          "from": 5950,
+          "unitLabel": "fitted"
+        },
+        {
+          "id": "multi-5",
+          "name": "Five-room multi-split",
+          "spec": "Five indoor units, one or two outdoor condensers",
+          "from": 7250,
+          "unitLabel": "fitted"
+        }
+      ]
+    },
+    {
+      "id": "concealed",
+      "title": "Concealed and ducted",
+      "blurb": "Where a wall unit would spoil the room, the fan coil hides in a ceiling void, a loft or a cupboard, and all you see is a slim grille. This is what we fit most often in listed buildings and high-spec refurbishments.",
+      "items": [
+        {
+          "id": "ducted-zone",
+          "name": "Ducted system - per zone",
+          "spec": "Concealed fan coil, ducted to linear grilles",
+          "from": 4500,
+          "unitLabel": "per zone, fitted",
+          "includes": [
+            "Nothing visible in the room except a slim supply and return grille",
+            "Needs around 300 mm of ceiling void or a loft above - we confirm on survey",
+            "Best planned alongside building work, before ceilings close up"
+          ]
+        },
+        {
+          "id": "cassette-home",
+          "name": "Ceiling cassette",
+          "spec": "Flush four-way cassette set into a plasterboard ceiling",
+          "from": 3200,
+          "unitLabel": "per unit, fitted",
+          "includes": [
+            "Sits flush with the ceiling, blowing to all four sides",
+            "Suits garden rooms, extensions and open-plan kitchens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "title": "For businesses",
+      "blurb": "Offices, shops, salons, restaurants, studios and server rooms across London. Priced excluding VAT. We work evenings and weekends where a fit-out cannot interrupt trading.",
+      "business": true,
+      "items": [
+        {
+          "id": "comm-cassette",
+          "name": "Office ceiling cassette, 3.5-7 kW",
+          "spec": "Per unit, installed into a suspended ceiling",
+          "from": 3200,
+          "unitLabel": "per unit, excl. VAT",
+          "includes": [
+            "Standard 600 x 600 grid-compatible cassettes",
+            "Zoned controls so meeting rooms and open plan run independently",
+            "Out-of-hours installation available at no premium on planned works"
+          ]
+        },
+        {
+          "id": "server-room",
+          "name": "Server and comms room cooling",
+          "spec": "Continuous-duty system with remote fault alarm",
+          "from": 2950,
+          "unitLabel": "excl. VAT",
+          "includes": [
+            "Rated for year-round running, including sub-zero outdoor temperatures",
+            "Volt-free alarm contact wired to your monitoring or a dialler",
+            "Optional N+1 pair so one unit can fail without taking the room down"
+          ]
+        },
+        {
+          "id": "vrf",
+          "name": "VRF / VRV system, designed and installed",
+          "spec": "Whole-building systems, 8 kW upwards",
+          "poa": true,
+          "unitLabel": "designed on survey",
+          "includes": [
+            "Full heat-load design, drawings and O&M manual",
+            "Staged installation around your trading hours or fit-out programme",
+            "Handover with BMS or standalone central controller"
+          ]
+        },
+        {
+          "id": "tm44",
+          "name": "TM44 air conditioning inspection",
+          "spec": "Legally required for systems over 12 kW, every five years",
+          "from": 295,
+          "unitLabel": "excl. VAT",
+          "includes": [
+            "Carried out by an accredited energy assessor",
+            "Report lodged on the national register",
+            "Covers the enforcement requirement under the Energy Performance of Buildings Regulations"
+          ]
+        }
+      ]
+    }
+  ],
+
+  "extras": [
+    { "id": "pipe-extra", "name": "Refrigerant pipe run beyond the first 5 metres", "price": 45, "unitLabel": "per metre", "note": "Common when the outdoor unit has to go at the front of the house or down at garden level." },
+    { "id": "condensate-pump", "name": "Condensate pump", "price": 185, "unitLabel": "per indoor unit", "note": "Needed where the drain cannot fall away under gravity - typical in flats and internal rooms." },
+    { "id": "trunking", "name": "Slimduct cosmetic trunking, painted to match", "price": 120, "unitLabel": "per 2 metres", "note": "Boxes in the external pipework neatly instead of leaving taped insulation on the wall." },
+    { "id": "electrics", "name": "New dedicated 16 A circuit and RCBO", "price": 285, "unitLabel": "per system", "note": "Required where your consumer unit has no suitable spare way. Part P certified." },
+    { "id": "cu-upgrade", "name": "Consumer unit upgrade", "price": 550, "unitLabel": "from", "note": "Only where an older board cannot safely take the additional circuit." },
+    { "id": "high-level", "name": "High-level, roof or parapet mounting", "price": 450, "unitLabel": "from", "note": "Covers tower hire, roof access and the additional fixings and safety kit." },
+    { "id": "ground-mount", "name": "Ground-mounted condenser on anti-vibration feet", "price": 95, "unitLabel": "per unit", "note": "Instead of wall brackets, where the unit sits on a patio or flat roof." },
+    { "id": "wifi", "name": "Wi-Fi controller and app set-up", "price": 145, "unitLabel": "per system", "note": "Control from your phone, plus schedules and holiday mode. Works with Alexa and Google Home." },
+    { "id": "make-good", "name": "Making good and decorating after core drilling", "price": 95, "unitLabel": "per penetration", "note": "Filled, sanded and touched in. Most customers only need this on a front elevation." },
+    { "id": "removal", "name": "Removing an old system, with refrigerant recovery", "price": 180, "unitLabel": "per system", "note": "Legally recovered and disposed of, with the paperwork to prove it." },
+    { "id": "planning-pack", "name": "Planning drawing pack for a council application", "price": 395, "unitLabel": "from", "note": "Elevations, unit position and specification, prepared for submission." },
+    { "id": "acoustic", "name": "Acoustic report for a planning application", "price": 450, "unitLabel": "from", "note": "A BS 4142 noise assessment. Several London boroughs ask for one before they will approve an outdoor unit." }
+  ],
+
+  "care": [
+    { "id": "service-1", "name": "Annual service, one indoor unit", "price": 129, "unitLabel": "per visit", "note": "Filters, coils, drain, refrigerant check, electrical check and a written report." },
+    { "id": "service-extra", "name": "Each additional indoor unit on the same visit", "price": 45, "unitLabel": "per unit", "note": "Cheaper than booking separate visits." },
+    { "id": "care-plan", "name": "CoolAir Care - two visits a year", "price": 199, "unitLabel": "per year, one unit", "note": "Pre-summer and pre-winter checks, priority booking, and 10% off any repair." },
+    { "id": "warranty-ext", "name": "5-year parts and labour warranty", "price": 0, "unitLabel": "included with a care plan", "note": "Kept in force by the annual service. Most manufacturers require servicing to honour their own warranty anyway." },
+    { "id": "callout", "name": "Repair callout, first hour", "price": 145, "unitLabel": "per visit", "note": "Waived if the fault turns out to be our workmanship, whatever the age of the install." },
+    { "id": "leak-test", "name": "Statutory leak test for business systems", "price": 165, "unitLabel": "per system", "note": "Required by the F-Gas Regulation for systems above 5 tonnes CO2 equivalent." }
+  ]
+}

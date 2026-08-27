@@ -1,0 +1,54 @@
+{
+  "_comment": "These render on the home page AND become FAQPage structured data, which is how they can appear directly in Google results. Keep answers factual - Google demotes pages whose FAQ markup does not match visible text, and customers notice bluffing.",
+
+  "faqs": [
+    {
+      "q": "Do I need planning permission for air conditioning in London?",
+      "a": "Usually yes, for a home. Air source heat pumps installed for heating have permitted development rights, but comfort cooling units generally do not, so an outdoor condenser on a house or flat normally needs an application to your council. It is close to certain if you are in a conservation area, in a listed building, in a flat, or fixing the unit to a front elevation. We tell you where you stand at the survey, before you have spent anything, and we can prepare the drawings and the acoustic report if you decide to apply. Councils differ, so treat this as our experience rather than legal advice, and confirm with your own borough."
+    },
+    {
+      "q": "How long does an installation take?",
+      "a": "A single-room system is normally one day, start to finish, with two engineers. Two or three rooms on a multi-split is usually two days. A concealed ducted system depends on access to the ceiling void and is quoted individually. We give you the number of days in the written quote and we do not leave the job part-finished over a weekend."
+    },
+    {
+      "q": "Does air conditioning heat as well as cool?",
+      "a": "Every system we install does both. In heating mode it is an air-to-air heat pump, and it is genuinely efficient - typically three to four units of heat for each unit of electricity. Many customers use it in spring and autumn to avoid firing the boiler for the whole house when only one room is cold."
+    },
+    {
+      "q": "What does it cost to run?",
+      "a": "A 3.5 kW system cooling a living room draws roughly 0.8 to 1.0 kW once it has pulled the room down, so at around 25p per kWh that is about 20 to 25p an hour. Modern inverter units cost most in their first half hour and then settle. Heating tends to be cheaper per unit of heat than a gas boiler at current prices, though that depends on your tariff."
+    },
+    {
+      "q": "How noisy is it, inside and out?",
+      "a": "Indoor units on the ranges we fit run from about 19 to 22 dB on quiet mode, which is below a whisper and quieter than most fridges. The outdoor unit is the one that matters for neighbours, typically around 46 to 50 dB at one metre. We position it away from boundaries and bedroom windows, mount it on anti-vibration fixings, and where a council or a neighbour is likely to raise it we get an acoustic assessment rather than argue afterwards."
+    },
+    {
+      "q": "Why do you have to be F-Gas certified?",
+      "a": "Refrigerant is a potent greenhouse gas and UK law restricts who can handle it. Anyone installing, servicing or decommissioning a system must hold a personal F-Gas qualification, and the company must be certified as well. If an installer cannot produce both, the installation is unlawful, the manufacturer warranty will not stand, and your insurer may take a view on it. Ask any quote you receive for their certificate number, including ours."
+    },
+    {
+      "q": "How much mess does it make?",
+      "a": "Less than people expect. The main event is a 65 mm core drill through one external wall per indoor unit, which we do with a vacuum shroud. Floors are covered, furniture is sheeted, and we take the waste away. Where a front elevation is involved we offer making good and touching in as a priced extra, so you are not left with a patch."
+    },
+    {
+      "q": "I live in a flat. Can I have air conditioning?",
+      "a": "Often, but the freeholder or managing agent decides, not us. You will usually need written consent for anything fixed to the exterior, and many buildings set conditions on position and noise. We give you the specification and drawings to submit, and we are honest early if we think your block will refuse - it saves everyone a wasted survey."
+    },
+    {
+      "q": "What warranty do I get?",
+      "a": "The manufacturer warranty registered in your name, which is five years across most of the ranges we fit and seven on some, plus our own two-year guarantee on the installation work. Manufacturers require an annual service to honour their warranty, which is the main reason our care plan exists. Take the plan and we extend parts and labour cover to five years ourselves."
+    },
+    {
+      "q": "Are your prices really fixed?",
+      "a": "The quote is fixed. The guide prices on this site are honest starting points for a standard installation, and the survey turns one into a written fixed price. It only changes afterwards if you change the scope, or if something genuinely could not be seen at survey - and in that case we stop, explain it and get your agreement before doing the work."
+    },
+    {
+      "q": "Do you take away my old system?",
+      "a": "Yes. Old refrigerant has to be recovered by a certified engineer and disposed of through a licensed route, which is a priced line on the quote rather than something to fly-tip. You get the paperwork."
+    },
+    {
+      "q": "Which areas of London do you cover?",
+      "a": "All of Greater London and the immediate M25 fringe, from a base in SE24. Surveys are free within the M25. We publish detailed notes for the areas we work in most - Clapham and Battersea, Islington, Kensington and Chelsea, Richmond, Canary Wharf, Hackney, Wimbledon, Hampstead, Ealing and the City."
+    }
+  ]
+}
