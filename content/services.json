@@ -228,7 +228,7 @@
   "care": [
     { "id": "service-1", "name": "Annual service, one indoor unit", "price": 129, "unitLabel": "per visit", "note": "Filters, coils, drain, refrigerant check, electrical check and a written report." },
     { "id": "service-extra", "name": "Each additional indoor unit on the same visit", "price": 45, "unitLabel": "per unit", "note": "Cheaper than booking separate visits." },
-    { "id": "care-plan", "name": "CoolAir Care - two visits a year", "price": 199, "unitLabel": "per year, one unit", "note": "Pre-summer and pre-winter checks, priority booking, and 10% off any repair." },
+    { "id": "care-plan", "name": "Cool Care - two visits a year", "price": 199, "unitLabel": "per year, one unit", "note": "Pre-summer and pre-winter checks, priority booking, and 10% off any repair." },
     { "id": "warranty-ext", "name": "5-year parts and labour warranty", "price": 0, "unitLabel": "included with a care plan", "note": "Kept in force by the annual service. Most manufacturers require servicing to honour their own warranty anyway." },
     { "id": "callout", "name": "Repair callout, first hour", "price": 145, "unitLabel": "per visit", "note": "Waived if the fault turns out to be our workmanship, whatever the age of the install." },
     { "id": "leak-test", "name": "Statutory leak test for business systems", "price": 165, "unitLabel": "per system", "note": "Required by the F-Gas Regulation for systems above 5 tonnes CO2 equivalent." }

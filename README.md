@@ -1,4 +1,4 @@
-# CoolAir London — website
+# Better Be Cool — website
 
 A complete, self-contained marketing site for an air conditioning installation
 business covering London. Static HTML, no framework, no dependencies, no
@@ -27,7 +27,7 @@ one of them is in **`content/site.json`**.
 |---|---|---|
 | `phone` / `phoneHref` | `020 7946 0123` | Ofcom reserves `020 7946 0xxx` for fiction, so it can never ring a real person by accident. |
 | `whatsapp` | `447700900123` | Same — `07700 900xxx` is the reserved drama mobile range. |
-| `email` | `hello@coolairlondon.co.uk` | You don't own the domain yet. |
+| `email` | `hello@betterbecool.co.uk` | You don't own the domain yet. |
 | `address` + `latitude`/`longitude` | A Herne Hill industrial estate | Your real trading address. The coordinates feed the map data Google reads. |
 
 Also review, because they are claims a customer can hold you to:
@@ -130,9 +130,15 @@ extensions or check the new host supports it.
 
 ### Domain
 
-Buy `coolairlondon.co.uk` (or whatever you settle on) and point it at the host.
-A `.co.uk` reads as more trustworthy to UK customers than `.com` for a local
-trade, and it's a mild ranking signal for UK searches.
+Buy `betterbecool.co.uk` and point it at Vercel. A `.co.uk` reads as more
+trustworthy to UK customers than `.com` for a local trade, and it's a mild
+ranking signal for UK searches. Grab the `.com` too if it's free — it costs
+little and stops someone else trading on the name.
+
+The name doesn't contain "air conditioning" or "London", so it gives up the
+small boost an exact-match domain used to bring. That matters much less than
+it once did, and the site compensates where it counts: every page title, H1
+and area page carries the words people actually search for.
 
 ---
 

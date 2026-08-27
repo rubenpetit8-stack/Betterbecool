@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* CoolAir London — static site generator.
+/* Better Be Cool — static site generator.
  *
  *   node build.mjs
  *

@@ -1,4 +1,4 @@
-/* CoolAir London — itemised quote builder.
+/* Better Be Cool — itemised quote builder.
    Reads window.CATALOGUE (generated into catalogue.js at build time), lets the
    visitor tick exactly what they want, keeps a running "from" total, then hands
    the itemised list straight to WhatsApp, email or the clipboard.
@@ -14,7 +14,7 @@
 
   var CAT = window.CATALOGUE;
   var BIZ = CAT.business;
-  var STORE_KEY = "coolair.quote.v1";
+  var STORE_KEY = "betterbecool.quote.v1";
 
   var state = {
     mode: "home",

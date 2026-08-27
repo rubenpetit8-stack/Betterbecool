@@ -73,5 +73,5 @@ createServer(async (req, res) => {
   });
   res.end(await readFile(file));
 }).listen(PORT, () => {
-  console.log(`CoolAir London — preview on http://localhost:${PORT}`);
+  console.log(`Better Be Cool — preview on http://localhost:${PORT}`);
 });
