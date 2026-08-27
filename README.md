@@ -228,7 +228,7 @@ system already added. The "Add to my quote" buttons on the pricing cards use it.
 ## Files
 
 ```
-hvac-london/
+betterbecool/
 ├── build.mjs              # the generator — run this
 ├── serve.mjs              # local preview, behaves like Vercel
 ├── vercel.json            # deploy config — build, clean URLs, headers
