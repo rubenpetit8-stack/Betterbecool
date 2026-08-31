@@ -466,3 +466,19 @@ main { flex: 1 0 auto; }
   .art-label text { font-size: 15px; }
   .art-label .art-label-sub { font-size: 13px; }
 }
+
+/* ---------- Work gallery ---------- */
+/* Illustrated scenes now, photographs later — the markup is the same either
+   way, so swapping one in changes nothing but the source. */
+.gallery { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
+.shot {
+  margin: 0; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+}
+.shot .scene-art, .shot img {
+  display: block; width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover;
+  border-bottom: 1px solid var(--line); background: var(--bg-3);
+}
+.shot figcaption { padding: 15px 17px; }
+.shot h3 { font-size: 1rem; margin-bottom: .3em; }
+.shot p { margin: 0; font-size: .9rem; color: var(--muted); line-height: 1.55; }

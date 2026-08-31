@@ -16,6 +16,7 @@ import {
   layout, esc, money, icon, pretty, quoteBuilder, ctaBand, trustBar, housePlacementDiagram,
   faqSection, faqLd, priceCard, extrasTable
 } from "./lib/templates.mjs";
+import { sceneArt } from "./lib/scenes.mjs";
 import { cropPngHeight, pngSize } from "./lib/png.mjs";
 
 const root = dirname(fileURLToPath(import.meta.url));
@@ -26,6 +27,7 @@ const site = read("site.json");
 const services = read("services.json");
 const { areas, alsoCover } = read("areas.json");
 const { faqs } = read("faq.json");
+const gallery = read("gallery.json");
 
 const allItems = services.groups.flatMap((g) => g.items.map((i) => ({ ...i, group: g })));
 const itemById = Object.fromEntries(allItems.map((i) => [i.id, i]));
@@ -43,6 +45,33 @@ const page = (rel, opts) => {
   write(rel, layout({ site, areas, path: "/" + rel, ...opts }));
   pages.push({ rel, priority: opts.priority ?? 0.7 });
 };
+
+
+/* One tile of the work gallery. A real photograph the moment an entry has one;
+   until then the illustration, captioned as such by the section around it. */
+const shot = (item) => `
+<figure class="shot">
+  ${item.photo
+    ? `<img src="${esc(item.photo)}" alt="${esc(item.alt || item.title)}" loading="lazy" width="800" height="600">`
+    : sceneArt(item.scene)}
+  <figcaption>
+    <h3>${esc(item.title)}</h3>
+    <p>${esc(item.caption)}</p>
+  </figcaption>
+</figure>`;
+
+const gallerySection = (items, { heading, lede, tint = true } = {}) => `
+<section class="section${tint ? " section--tint" : ""}" id="gallery">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:26px">
+      <span class="eyebrow">Our work</span>
+      <h2>${esc(heading || gallery.heading)}</h2>
+      <p class="lede">${esc(lede || gallery.lede)}</p>
+    </div>
+    <div class="gallery">${items.map(shot).join("")}</div>
+    ${items.some((i) => !i.photo) ? `<div class="notice" style="margin-top:22px"><p class="small">${esc(gallery.note)}</p></div>` : ""}
+  </div>
+</section>`;
 
 /* =========================================================== home ========= */
 
@@ -140,6 +169,8 @@ ${trustBar(site)}
     <p style="margin-top:22px"><a class="btn btn--ghost btn--sm" href="/#faq">Read the planning answer in full →</a></p>
   </div>
 </section>
+
+${gallerySection(gallery.items)}
 
 <section class="section" id="process">
   <div class="wrap">
@@ -488,6 +519,12 @@ ${trustBar(site)}
     </div>
   </div>
 </section>
+
+${gallerySection(gallery.items.slice(0, 3), {
+  heading: "What it looks like once it's in",
+  lede: "Where the indoor unit goes, where the pipework runs and where the outdoor box ends up decide whether you notice the system at all.",
+  tint: false
+})}
 
 ${local.length ? `
 <section class="section">

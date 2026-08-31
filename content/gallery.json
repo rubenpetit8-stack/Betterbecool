@@ -1,0 +1,41 @@
+{
+  "_comment": "The work gallery. Each entry draws an illustration until you give it a real photo: put the file in assets/ and add \"photo\": \"/assets/your-file.jpg\" plus an \"alt\" describing it. The moment an entry has a photo it renders that instead, and the honesty note below should come down once they are all real. Captions describe how the work is done — never claim a job that did not happen, or a place it did not happen in.",
+
+  "heading": "What it looks like once it's in",
+  "lede": "The best air conditioning is the kind you stop noticing. Where the indoor unit goes, where the pipework runs and where the outdoor box ends up are the difference between a system that disappears into the room and one you resent looking at.",
+
+  "note": "These are illustrations, not photographs. We would rather draw what we fit than show you stock photos of somebody else's work — real pictures of our own installations replace them as the jobs come in.",
+
+  "items": [
+    {
+      "scene": "living-room",
+      "title": "Living room, 3.5 kW wall unit",
+      "caption": "High on the wall opposite the window, so cool air travels the length of the room. Pipework drops straight through behind the unit to the outside wall."
+    },
+    {
+      "scene": "bedroom",
+      "title": "Bedroom, 2.5 kW wall unit",
+      "caption": "On the side wall rather than above the bed, so nobody sleeps in the airflow. Quiet mode runs at around 19 dB — below a whisper."
+    },
+    {
+      "scene": "kitchen-extension",
+      "title": "Kitchen extension, ceiling cassette",
+      "caption": "Set flush into the plasterboard, blowing to all four sides. Fitted while the ceiling was open, which is far cheaper than retrofitting it later."
+    },
+    {
+      "scene": "rear-elevation",
+      "title": "Rear elevation, outdoor unit",
+      "caption": "On brackets above the extension roof, invisible from the street. Pipework boxed into painted trunking rather than left as taped insulation."
+    },
+    {
+      "scene": "loft-room",
+      "title": "Loft bedroom, floor console",
+      "caption": "Under the dormer, where a sloped ceiling leaves no wall tall enough for a high-wall unit. Blows warm air at floor level in winter."
+    },
+    {
+      "scene": "office",
+      "title": "Office floor, cassettes",
+      "caption": "Standard 600 mm cassettes into the existing grid, zoned so meeting rooms and open plan run independently. Installed outside trading hours."
+    }
+  ]
+}

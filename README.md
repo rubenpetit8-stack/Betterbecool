@@ -55,6 +55,7 @@ Everything a non-developer needs to change is JSON in `content/`.
 | `content/services.json` | **The itemised catalogue** — every system, extra and service plan, with prices |
 | `content/areas.json` | The London areas that get their own page, and the local notes on each |
 | `content/faq.json` | The questions on the home page (these also become Google's FAQ markup) |
+| `content/gallery.json` | The "our work" gallery — captions now, your photographs later |
 
 Change a price in `content/services.json` and it updates the pricing page, the
 area pages, the quote builder and the structured data Google reads — all from
@@ -195,12 +196,31 @@ In rough order of how much difference it makes:
    the elevation from the street showing you can barely tell. Put them on the
    area pages and the Google profile.
 
-   Until you have them, the price cards carry line drawings of each unit type
-   (`lib/illustrations.mjs`) so a customer can see what they're choosing
-   between. These are honest about what they are — drawings, not photographs of
-   work we've done. Replace them as the real pictures come in: drop the image
-   into `assets/`, then swap `${unitArt(item.art)}` in `priceCard()` for an
-   `<img>`. Photograph landscape, roughly 3:2, and keep the file under 300 KB.
+   Until you have them the site draws its own pictures, and says so rather than
+   passing them off:
+
+   - **Price cards** carry a line drawing of each unit type
+     (`lib/illustrations.mjs`), tagged per item by the `art` field in
+     `content/services.json`.
+   - **The gallery** on the home page and every area page uses illustrated
+     room scenes (`lib/scenes.mjs`), listed in `content/gallery.json`.
+
+   **Swapping a real photo in takes one line.** Put the file in `assets/`, then
+   add `photo` and `alt` to that gallery entry:
+
+   ```json
+   { "scene": "living-room",
+     "photo": "/assets/clapham-living-room.jpg",
+     "alt": "A 3.5 kW wall unit above a sofa in a Victorian living room",
+     "title": "Living room, 3.5 kW wall unit",
+     "caption": "..." }
+   ```
+
+   The tile renders the photograph instead of the drawing; nothing else changes.
+   Shoot landscape at 4:3, save around 1200px wide, keep it under 300 KB. Once
+   every entry has a photo, delete the `note` line from `content/gallery.json` —
+   that's the sentence explaining the pictures are illustrations, and it should
+   come down when it stops being true.
 
 Add new areas by appending to `content/areas.json` — a page, sitemap entry and
 footer link are generated automatically. Write real local detail for each one.
