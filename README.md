@@ -201,7 +201,7 @@ footer link are generated automatically. Write real local detail for each one.
 
 ## The quote builder
 
-`assets/quote.js`, mounted anywhere the page contains `#quote-builder` (the home
+`assets/quote.js`, mounted on every `.quote-builder` on the page (the home
 page, the pricing page, every area page and the contact page).
 
 The customer picks systems, extras and service plans, sees a running "from"
