@@ -13,7 +13,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import {
-  layout, esc, money, icon, pretty, quoteBuilder, ctaBand, trustBar,
+  layout, esc, money, icon, pretty, quoteBuilder, ctaBand, trustBar, housePlacementDiagram,
   faqSection, faqLd, priceCard, extrasTable
 } from "./lib/templates.mjs";
 import { cropPngHeight, pngSize } from "./lib/png.mjs";
@@ -118,6 +118,26 @@ ${trustBar(site)}
       ${popular.slice(0, 3).map((i) => priceCard(i, i.group)).join("")}
     </div>
     <p style="margin-top:24px"><a class="btn btn--ghost" href="/pricing">Every system, extra and service plan, itemised →</a></p>
+  </div>
+</section>
+
+<section class="section" id="outdoor-unit">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:26px">
+      <span class="eyebrow">The question everyone asks first</span>
+      <h2>Where does the outdoor unit go?</h2>
+      <p class="lede">Every system needs one box outside. Where it can go decides what you can have fitted, what it costs, and whether you need planning permission — so we settle it at the free survey, before you commit to anything.</p>
+    </div>
+    <figure class="diagram" style="margin:0">
+      ${housePlacementDiagram()}
+      <figcaption>A typical London terrace. The condenser sits on the rear wall above the extension roof, with short runs up to the bedrooms.</figcaption>
+    </figure>
+    <div class="grid grid--3" style="margin-top:22px">
+      <div class="card card--flag"><h3 style="font-size:1rem">Rear elevation, nearly always</h3><p class="small" style="margin:0">Above the kitchen extension it is invisible from the street, and the pipe run to the bedrooms stays short — which keeps both the price and the running cost down.</p></div>
+      <div class="card card--flag"><h3 style="font-size:1rem">Ground level where there's room</h3><p class="small" style="margin:0">On anti-vibration feet behind planting it is quieter to live with than a unit fixed to a wall, easier to service, and nothing is drilled through a finished elevation.</p></div>
+      <div class="card card--flag"><h3 style="font-size:1rem">One box beats four</h3><p class="small" style="margin:0">A multi-split runs several rooms from a single condenser. In a conservation area that is often the difference between an application succeeding and being refused.</p></div>
+    </div>
+    <p style="margin-top:22px"><a class="btn btn--ghost btn--sm" href="/#faq">Read the planning answer in full →</a></p>
   </div>
 </section>
 
@@ -451,8 +471,26 @@ ${trustBar(site)}
   </div>
 </section>
 
-${local.length ? `
 <section class="section section--tint">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:24px">
+      <span class="eyebrow">Before you commit</span>
+      <h2>We settle the outdoor unit first</h2>
+      <p class="lede">It decides what you can have, what it costs and whether you need permission. We work it out at the free survey and tell you straight — including when the answer is that an application is unlikely to succeed.</p>
+    </div>
+    <figure class="diagram" style="margin:0">
+      ${housePlacementDiagram()}
+      <figcaption>Where the outdoor unit usually ends up on a ${esc(area.name)} property. Yours is settled on site, not from a drawing.</figcaption>
+    </figure>
+    <div class="btn-row" style="margin-top:22px">
+      <a class="btn btn--primary" href="/contact">Book a free survey</a>
+      <a class="btn btn--ghost" href="https://wa.me/${esc(site.whatsapp)}">${icon("whatsapp")} Send us a photo of the back of the house</a>
+    </div>
+  </div>
+</section>
+
+${local.length ? `
+<section class="section">
   <div class="wrap">
     <div class="narrow" style="margin-bottom:24px">
       <span class="eyebrow">Popular here</span>

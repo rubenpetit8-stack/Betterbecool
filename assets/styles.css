@@ -430,3 +430,39 @@ main { flex: 1 0 auto; }
   .site-header, .mobile-bar, .cta-band, .site-footer { display: none !important; }
   body { font-size: 12pt; }
 }
+
+/* ---------- Illustrations ---------- */
+/* Line drawings of the units, on the price cards and in the placement diagram.
+   Everything strokes with currentColor and fills from tokens, so both themes
+   are handled by the same markup. */
+.unit-art, .house-art { display: block; width: 100%; height: auto; color: var(--ink); }
+.art-line   { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.art-body   { fill: var(--surface); stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
+.art-accent { fill: var(--brand-tint); stroke: currentColor; stroke-width: 1.6; }
+.art-flow   { fill: none; stroke: var(--cool); stroke-width: 2.6; stroke-linecap: round; }
+.art-faint  { fill: none; stroke: currentColor; stroke-width: 1.4; opacity: .38; }
+.art-fill-faint { fill: var(--bg-3); stroke: none; }
+.art-faint-fill { fill: var(--bg-3); stroke: currentColor; stroke-width: 1.4; opacity: .55; }
+.art-unit   { fill: var(--brand); stroke: none; }
+.art-pipe   { fill: none; stroke: var(--brand); stroke-width: 2.4; stroke-linecap: round;
+              stroke-linejoin: round; stroke-dasharray: 7 5; }
+
+.art-label text { font-family: var(--font); font-size: 13px; font-weight: 650; fill: var(--ink); }
+.art-label .art-label-sub { font-size: 11.5px; font-weight: 500; fill: var(--muted); }
+.art-leader { fill: none; stroke: currentColor; stroke-width: 1.4; opacity: .45; }
+
+.price-card figure {
+  margin: 0 0 16px; padding: 12px 10px 6px; background: var(--bg-2);
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+}
+.price-card figure .unit-art { max-height: 132px; }
+
+.diagram {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px; box-shadow: var(--shadow);
+}
+.diagram figcaption { margin-top: 14px; color: var(--muted); font-size: .92rem; }
+@media (max-width: 640px) {
+  .art-label text { font-size: 15px; }
+  .art-label .art-label-sub { font-size: 13px; }
+}

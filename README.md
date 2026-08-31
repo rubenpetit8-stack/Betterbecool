@@ -189,10 +189,18 @@ In rough order of how much difference it makes:
 5. **Trade directories and accreditation listings** — REFCOM and manufacturer
    "find an installer" pages carry real weight because they're authoritative and
    they link back to you.
-6. **Photos.** The one thing this site can't generate. Photograph every job:
-   the outdoor unit sited neatly, tidy trunking, the finished room. Put them on
-   the area pages and the Google profile. Nothing converts a nervous homeowner
-   like seeing a condenser that doesn't ruin an elevation.
+6. **Photos.** The one thing this site can't generate, and the thing that
+   converts a nervous homeowner faster than any amount of copy. Photograph
+   every job: the outdoor unit sited neatly, tidy trunking, the finished room,
+   the elevation from the street showing you can barely tell. Put them on the
+   area pages and the Google profile.
+
+   Until you have them, the price cards carry line drawings of each unit type
+   (`lib/illustrations.mjs`) so a customer can see what they're choosing
+   between. These are honest about what they are — drawings, not photographs of
+   work we've done. Replace them as the real pictures come in: drop the image
+   into `assets/`, then swap `${unitArt(item.art)}` in `priceCard()` for an
+   `<img>`. Photograph landscape, roughly 3:2, and keep the file under 300 KB.
 
 Add new areas by appending to `content/areas.json` — a page, sitemap entry and
 footer link are generated automatically. Write real local detail for each one.
