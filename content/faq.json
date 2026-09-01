@@ -1,10 +1,9 @@
 {
   "_comment": "These render on the home page AND become FAQPage structured data, which is how they can appear directly in Google results. Keep answers factual - Google demotes pages whose FAQ markup does not match visible text, and customers notice bluffing.",
-
   "faqs": [
     {
       "q": "Do I need planning permission for air conditioning in London?",
-      "a": "Usually yes, for a home. Air source heat pumps installed for heating have permitted development rights, but comfort cooling units generally do not, so an outdoor condenser on a house or flat normally needs an application to your council. It is close to certain if you are in a conservation area, in a listed building, in a flat, or fixing the unit to a front elevation. We tell you where you stand at the survey, before you have spent anything, and we can prepare the drawings and the acoustic report if you decide to apply. Councils differ, so treat this as our experience rather than legal advice, and confirm with your own borough."
+      "a": "Often not — but the exceptions are common in London, so we check your specific address before you commit to anything. A system that both heats and cools counts as an air source heat pump, and installing one at a house is usually permitted development under Class G, provided it meets the conditions. The ones that catch people out: it cannot be a cooling-only unit; it cannot go on a pitched roof, and must sit back from the edge of a flat roof; it has to pass the MCS 020 sound calculation at your nearest neighbour's window, which is the condition that most often fails in a tight terrace; and on a house that isn't detached, only the first unit is permitted development. In a conservation area it cannot go on a wall or roof fronting a highway. A listed building needs listed building consent whatever else applies, and a flat will usually need freeholder or managing agent consent on top. We tell you which of these applies to you at the free survey. Councils interpret the rules differently and the standards get tightened from time to time, so treat this as our working experience rather than legal advice and confirm the position with your own borough."
     },
     {
       "q": "How long does an installation take?",

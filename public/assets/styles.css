@@ -482,3 +482,30 @@ main { flex: 1 0 auto; }
 .shot figcaption { padding: 15px 17px; }
 .shot h3 { font-size: 1rem; margin-bottom: .3em; }
 .shot p { margin: 0; font-size: .9rem; color: var(--muted); line-height: 1.55; }
+
+/* ---------- Schematic backdrops ---------- */
+/* A faint engineering-drawing layer behind the hero and the closing band. Kept
+   low-contrast on purpose: it should register as texture, never compete with
+   the text sitting on it. */
+.backdrop {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0; color: var(--brand); opacity: .55;
+}
+.backdrop .bd-text {
+  font-family: var(--font); font-size: 13px; font-weight: 600;
+  fill: currentColor; stroke: none; opacity: .8;
+}
+.backdrop--band { color: #fff; opacity: .38; }
+@media (prefers-color-scheme: dark) {
+  .backdrop { opacity: .4; }
+  .backdrop--band { color: #06131c; opacity: .26; }
+}
+:root[data-theme="dark"] .backdrop { opacity: .4; }
+:root[data-theme="dark"] .backdrop--band { color: #06131c; opacity: .26; }
+
+/* Content has to sit above the drawing. */
+.hero > .wrap, .cta-band > .wrap { position: relative; z-index: 1; }
+.cta-band { position: relative; overflow: hidden; }
+
+@media (max-width: 760px) { .backdrop { opacity: .34; } }
+@media (prefers-reduced-motion: no-preference) { .backdrop { transition: opacity .3s ease; } }

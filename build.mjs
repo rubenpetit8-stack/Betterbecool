@@ -14,6 +14,7 @@ import { fileURLToPath } from "node:url";
 
 import {
   layout, esc, money, icon, pretty, quoteBuilder, ctaBand, trustBar, housePlacementDiagram,
+  schematicBackdrop,
   faqSection, faqLd, priceCard, extrasTable
 } from "./lib/templates.mjs";
 import { sceneArt } from "./lib/scenes.mjs";
@@ -77,6 +78,7 @@ const gallerySection = (items, { heading, lede, tint = true } = {}) => `
 
 const homeBody = `
 <section class="hero">
+  ${schematicBackdrop()}
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">${esc(site.address.locality)} · Greater London &amp; the M25</span>

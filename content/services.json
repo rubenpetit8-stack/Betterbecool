@@ -296,14 +296,14 @@
       "name": "Planning drawing pack for a council application",
       "price": 395,
       "unitLabel": "from",
-      "note": "Elevations, unit position and specification, prepared for submission."
+      "note": "Elevations, unit position and specification, prepared for submission — for the cases where permitted development doesn't cover you."
     },
     {
       "id": "acoustic",
-      "name": "Acoustic report for a planning application",
+      "name": "Sound assessment for planning or permitted development",
       "price": 450,
       "unitLabel": "from",
-      "note": "A BS 4142 noise assessment. Several London boroughs ask for one before they will approve an outdoor unit."
+      "note": "An MCS 020 calculation is what permitted development requires; a fuller BS 4142 assessment is what a borough usually wants with an application. We tell you which you need."
     }
   ],
   "care": [

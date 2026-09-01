@@ -296,12 +296,21 @@ commit the regenerated PNG.
 
 ## A note on the planning-permission content
 
-The FAQ says that comfort cooling for a home generally needs planning
-permission, unlike an air source heat pump installed for heating, which has
-permitted development rights. That reflects how most London boroughs treat it,
-and being straight about it is a genuine differentiator — most competitor sites
-quietly avoid the question.
+The FAQ answers the planning question properly, because it is the first thing
+customers ask and most competitor sites are vague about it.
 
-It is not legal advice, boroughs differ, and the position can change. The copy
-says so. Keep it that way, and check the current position with the relevant
-council before telling a specific customer where they stand.
+The position it states: a system that heats as well as cools counts as an air
+source heat pump, so installing one at a house is usually permitted development
+under Class G of the GPDO — provided it is not cooling-only, is not on a pitched
+roof, passes the MCS 020 sound calculation at the nearest neighbour's window,
+and is the first unit on a house that isn't detached. Conservation areas bar a
+wall or roof fronting a highway; listed buildings need consent regardless; flats
+generally need freeholder consent as well.
+
+Being accurate here is worth more than being cautious. Telling a customer with
+an ordinary terrace that they probably need permission, when they probably do
+not, loses the job to whoever answered correctly.
+
+It is not legal advice, boroughs differ, and MCS 020 has been tightened before
+and will be again. The copy says so. Check the current position with the
+relevant council before telling a specific customer where they stand.
