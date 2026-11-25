@@ -651,3 +651,71 @@ main { flex: 1 0 auto; }
 }
 .roi-verdict--good { background: color-mix(in srgb, var(--good) 15%, transparent); color: var(--ink); }
 .roi-verdict--warn { background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--ink); }
+
+/* ---------- Action icons ---------- */
+.act { width: 46px; height: 46px; display: block; color: var(--brand); }
+.act-bg { fill: var(--brand-tint); }
+.act-line { stroke: currentColor; }
+
+/* ---------- The four-verb strip ---------- */
+/* The mental model, before any detail. Somebody who reads only this still
+   understands what they would be buying. */
+.flow {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 6px;
+  margin-bottom: 14px;
+}
+.flow span {
+  font-size: clamp(1.1rem, .9rem + .8vw, 1.5rem); font-weight: 750;
+  letter-spacing: -.02em; color: var(--ink);
+}
+.flow i {
+  font-style: normal; color: var(--brand); font-weight: 700;
+  font-size: 1.1em; line-height: 1; opacity: .55;
+}
+
+/* ---------- Capability cards, tightened ---------- */
+.cap-card { display: flex; flex-direction: column; gap: 0; }
+.cap-card .act { margin-bottom: 14px; }
+.cap-card h3 { font-size: 1.12rem; margin-bottom: .35em; letter-spacing: -.02em; }
+.cap-card > p { color: var(--ink-soft); margin-bottom: 14px; }
+.cap-card .ticks { margin-top: auto; }
+.cap-card .ticks li { color: var(--muted); font-size: .88rem; }
+
+/* ---------- Thread playback ---------- */
+/* The messages slide in one after another, which is the closest thing on the
+   page to watching the product work.
+   Opacity is never animated and never set to 0. An earlier version faded them
+   in, which meant a browser that skipped the animation — or simply stalled on
+   the delay — showed an empty box where the entire demo should be. Motion is
+   the only thing at stake here; legibility is not allowed to be. */
+.thread.is-armed .msg,
+.thread.is-armed .thread-meta { transform: translateY(12px); }
+.thread.is-playing .msg,
+.thread.is-playing .thread-meta {
+  animation: msg-in .5s cubic-bezier(.2, .7, .3, 1) forwards;
+  animation-delay: calc(var(--i) * .45s);
+}
+@keyframes msg-in {
+  from { transform: translateY(12px); }
+  to   { transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .thread.is-armed .msg,
+  .thread.is-armed .thread-meta { transform: none; animation: none; }
+}
+
+/* ---------- Thumb-friendly ---------- */
+/* Half these visitors are standing up holding a phone in one hand. */
+.btn { padding: .92em 1.5em; }
+.btn--sm { padding: .6em 1.1em; }
+@media (max-width: 620px) {
+  .btn { width: 100%; justify-content: center; }
+  .btn--sm { width: auto; }
+  .btn-row { gap: 10px; }
+}
+
+/* ---------- Louder numbers ---------- */
+.price b { font-size: 2.35rem; letter-spacing: -.04em; }
+.stat-card b { color: var(--accent-dark); }
+@media (prefers-color-scheme: dark) { .stat-card b { color: var(--accent); } }
+:root[data-theme="dark"] .stat-card b { color: var(--accent); }

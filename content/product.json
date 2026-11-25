@@ -1,68 +1,71 @@
 {
-  "_comment": "What Foreman does, in the order it happens to a real enquiry. Each step maps to money the trade is currently losing — that is the point of the ordering. `art` picks the line drawing from lib/illustrations.mjs.",
+  "_comment": "What Foreman does, in the order it happens to a real enquiry. Written to be SCANNED, not read: a tradesperson is looking at this on a phone, standing up, between jobs. Short title, one line, three short proof points. If a card needs a paragraph, the card is wrong. `art` picks an icon from lib/illustrations.mjs — icons must mean what the card says.",
 
-  "problemHeading": "You are not losing work on price. You are losing it on silence.",
-  "problemLede": "A customer rings three firms on a Tuesday lunchtime. One answers. That one usually gets the job, and it is rarely about being cheapest. The rest of the leak is quotes that went out and were never chased.",
+  "flow": ["Answers", "Quotes", "Chases", "Books"],
+  "flowNote": "Four things, in that order, every time an enquiry comes in.",
+
+  "problemHeading": "You don't lose jobs on price. You lose them on silence.",
+  "problemLede": "A customer rings three firms at lunchtime. One picks up. That one usually gets the work — and it's rarely the cheapest. The rest leaks out of quotes nobody chased.",
   "problems": [
-    { "stat": "78%", "label": "of customers buy from whoever replies first", "note": "Not whoever is cheapest, and not whoever is best. Whoever is first." },
-    { "stat": "4 in 10", "label": "calls to a working trade go unanswered", "note": "Because you are under a floor, up a ladder, or driving." },
-    { "stat": "£3,000+", "label": "the average AC or boiler job you lose by not calling back", "note": "One a month is a salary's worth of work a year." }
+    { "stat": "78%", "label": "buy from whoever replies first", "note": "Not cheapest. Not best. First." },
+    { "stat": "4 in 10", "label": "calls to a working trade go unanswered", "note": "You're under a floor, up a ladder, or driving." },
+    { "stat": "£3,000", "label": "the job you lose by not calling back", "note": "One a month is a salary a year." }
   ],
-  "_statsComment": "These are industry-shaped figures used as framing, not measured claims about Foreman. Either source them properly before launch or soften them to 'most' and 'often' — an unsourced percentage on a B2B page is the first thing a sceptical buyer challenges.",
+  "_statsComment": "Industry-shaped framing, not measured claims about Foreman. Source them or soften them to 'most' and 'often' before launch — an unsourced percentage is the first thing a sceptical buyer challenges.",
 
   "doesHeading": "What it actually does",
-  "doesLede": "Six jobs, in the order they happen. Each one is a place work currently leaks out.",
+  "doesLede": "Six jobs. Each one is somewhere work currently leaks out.",
 
   "capabilities": [
     {
       "id": "answer",
-      "art": "wall-split",
-      "title": "Answers in under a minute, day or night",
-      "body": "Missed call turns into a text before they have dialled the next firm. Web form, WhatsApp and email get a real reply, not an autoresponder. Saturday night and bank holidays included.",
-      "detail": ["Missed-call-to-text in under 60 seconds", "Web, WhatsApp, email and Facebook in one place", "Out-of-hours and holiday cover", "Answers in your voice, not corporate filler"]
+      "art": "answers",
+      "title": "Answers in under a minute",
+      "body": "Day, night, Sunday. A missed call becomes a text before they've dialled the next firm.",
+      "detail": ["Missed call → text in 60 seconds", "Web, WhatsApp and email too", "Sounds like you, not a robot"]
     },
     {
       "id": "qualify",
-      "art": "multi",
-      "title": "Asks what you would have asked",
-      "body": "Make and age of the boiler. Which rooms, how big, what floor. Access, parking, whether they own the place. By the time you read it, you know whether it is worth the drive.",
-      "detail": ["Question sets per trade, edited by you", "Flags the time-wasters before you quote", "Postcode checked against your patch", "Photos requested and attached to the job"]
+      "art": "asks",
+      "title": "Asks what you'd have asked",
+      "body": "Boiler make and age. Which rooms, what floor, parking. You know if it's worth the drive before you drive.",
+      "detail": ["Your questions, your trade", "Spots time-wasters early", "Asks for photos"]
     },
     {
       "id": "quote",
-      "art": "ducted",
-      "title": "Builds the quote from your price book",
-      "body": "Your rates, your margins, your terms, your letterhead. Out the same day instead of next Sunday night. Anything it is not sure about, it hands to you rather than guessing.",
-      "detail": ["Itemised and branded, as a link or a PDF", "Your prices — it never invents one or discounts to win", "Hands over when the job is unusual", "You approve before it sends, until you turn that off"]
+      "art": "quotes",
+      "title": "Quotes from your price book",
+      "body": "Your rates, your margins, your letterhead. Out today instead of Sunday night.",
+      "detail": ["Itemised and branded", "Never invents a price", "Odd jobs come to you"]
     },
     {
       "id": "chase",
-      "art": "condenser",
-      "title": "Chases until you get an answer",
-      "body": "This is where most of the money is. Three polite follow-ups over a fortnight, stopping the moment they reply. Nobody does this by hand on a Friday at seven.",
-      "detail": ["Stops instantly on any reply", "Asks the question that unsticks it: too dear, bad timing, or gone elsewhere?", "Tells you why you lost, so the next quote is better", "Reheats old quotes when the season turns"]
+      "art": "chases",
+      "title": "Chases till you get an answer",
+      "body": "This is where the money is. Three polite nudges, stopping the second they reply.",
+      "detail": ["Stops on any reply", "Asks why, if it's a no", "Reheats old quotes in season"]
     },
     {
       "id": "book",
-      "art": "cassette",
-      "title": "Puts the survey in your diary",
-      "body": "Offers slots you actually have free, confirms, reminds the day before. The no-show rate on surveys halves when somebody gets a reminder.",
-      "detail": ["Reads your existing calendar", "Travel time between jobs built in", "Reminders by text the day before", "Reschedules without you touching it"]
+      "art": "books",
+      "title": "Books the survey",
+      "body": "Offers slots you've actually got free, then reminds them the day before.",
+      "detail": ["Reads your calendar", "Builds in travel time", "Halves no-shows"]
     },
     {
       "id": "report",
-      "art": "console",
-      "title": "Shows you where the work goes",
-      "body": "Enquiries in, quotes out, jobs won, and what each source is actually worth. Most trades are spending on something that has never produced a job.",
-      "detail": ["Win rate by source and by job type", "What your average quote is worth", "Which follow-up turned into money", "One page, monthly, in plain English"]
+      "art": "reports",
+      "title": "Shows you what's working",
+      "body": "In, quoted, won — and what each source is really worth. Most trades are paying for one that's never produced a job.",
+      "detail": ["Win rate by source", "What a quote is worth", "One page, monthly"]
     }
   ],
 
-  "approvalHeading": "It does not talk to your customers behind your back",
-  "approvalBody": "Every message Foreman writes goes to you first. You read it, you tap approve, it sends. That stays on for as long as you want it — some people leave it on forever, most switch it off for the routine stuff after a fortnight and keep it on for quotes over a certain value. It is your name on the van.",
+  "approvalHeading": "It won't talk to your customers behind your back",
+  "approvalBody": "Every message comes to you first. You read it, tap approve, it sends. Leave that on forever if you like — most people switch it off for the routine stuff after a fortnight and keep it on for the big quotes. It's your name on the van.",
 
-  "integrationsHeading": "Sits alongside what you already use",
-  "integrationsBody": "Foreman is a sales desk, not another job-management system. If you run Tradify, Jobber, ServiceM8, Commusoft or a diary and a notebook, it works with that rather than replacing it.",
-  "_integrationsComment": "Do not list named integrations as available until they are actually built and tested. Naming a system you have not integrated with is the quickest way to lose a demo.",
-  "integrations": ["Your existing calendar", "Your accounting package", "Your job management system", "Your number, via a divert"]
+  "integrationsHeading": "Keep what you already use",
+  "integrationsBody": "Foreman is a sales desk, not another job system. Tradify, Jobber, ServiceM8, or a diary and a notebook — it works alongside, not instead.",
+  "_integrationsComment": "Do not list named integrations as available until they are built and tested. Naming one you have not integrated with is the quickest way to lose a demo.",
+  "integrations": ["Your calendar", "Your accounts package", "Your job system", "Your number, on a divert"]
 }

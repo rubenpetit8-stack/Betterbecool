@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url";
 
 import {
   layout, esc, money, icon, pretty, ctaBand, trustBar,
-  faqSection, faqLd, unitArt, schematicBackdrop
+  faqSection, faqLd, actionArt, schematicBackdrop
 } from "./lib/templates.mjs";
 import { cropPngHeight, pngSize } from "./lib/png.mjs";
 
@@ -59,7 +59,7 @@ const planCard = (p) => `
    customer's side and from the trade's phone — far more convincing than a
    screenshot of a dashboard nobody opens. */
 const thread = () => `
-<div class="thread" role="img" aria-label="A text conversation: a missed call at 8:42pm turns into an automatic reply, qualifying questions, an itemised quote the same evening, and a follow-up on Saturday that wins the job.">
+<div class="thread" data-thread-play role="img" aria-label="A text conversation: a missed call at 8:42pm turns into an automatic reply, qualifying questions, an itemised quote the same evening, and a follow-up on Saturday that wins the job.">
   <div class="thread-meta">Tuesday, 8:42pm — you are on another job</div>
   <div class="msg msg--event">Missed call from 07700 900482</div>
   <div class="msg msg--out">
@@ -104,12 +104,12 @@ const homeBody = `
     <div>
       <span class="eyebrow">For plumbers, heating engineers and AC installers</span>
       <h1>The AI sales team for trades</h1>
-      <p class="lede">${esc(site.description)}</p>
+      <div class="flow">${product.flow.map((f, i) => `<span>${esc(f)}</span>${i < product.flow.length - 1 ? "<i>›</i>" : ""}`).join("")}</div>
+      <p class="lede">Every enquiry answered in under a minute, quoted from your own price book, and chased until you get an answer. Even when you're up a ladder.</p>
       <ul class="hero-points">
-        <li>${icon("check", 18)}<span>Replies to every enquiry in under a minute, including Sunday night</span></li>
-        <li>${icon("check", 18)}<span>Quotes from your price book — your rates, your margins, your letterhead</span></li>
-        <li>${icon("check", 18)}<span>Chases the quote until you get a yes or a no</span></li>
-        <li>${icon("check", 18)}<span>You approve every word, until you decide you don't need to</span></li>
+        <li>${icon("check", 18)}<span>Replies in under a minute, including Sunday night</span></li>
+        <li>${icon("check", 18)}<span>Your prices, your letterhead</span></li>
+        <li>${icon("check", 18)}<span>You approve every word</span></li>
       </ul>
       <div class="btn-row">
         <a class="btn btn--primary" href="${esc(pretty(site.navCta.href))}">Book a demo</a>
@@ -157,11 +157,11 @@ ${trustBar(site)}
       <h2>${esc(product.doesHeading)}</h2>
       <p class="lede">${esc(product.doesLede)}</p>
     </div>
-    <div class="grid grid--2">
-      ${product.capabilities.map((c, i) => `
+    <div class="grid grid--3">
+      ${product.capabilities.map((c) => `
       <article class="card cap-card">
-        <figure>${unitArt(c.art)}</figure>
-        <h3><i>${i + 1}</i> ${esc(c.title)}</h3>
+        ${actionArt(c.art)}
+        <h3>${esc(c.title)}</h3>
         <p>${esc(c.body)}</p>
         <ul class="ticks small">${c.detail.map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
       </article>`).join("")}
@@ -381,6 +381,7 @@ for (const seg of segments) {
     <div>
       <span class="eyebrow">${esc(seg.nav)}</span>
       <h1>${esc(site.name)} for ${esc(seg.name.toLowerCase())}</h1>
+      <div class="flow">${product.flow.map((f, i) => `<span>${esc(f)}</span>${i < product.flow.length - 1 ? "<i>›</i>" : ""}`).join("")}</div>
       <p class="lede">${esc(seg.intro)}</p>
       <div class="btn-row" style="margin-top:18px">
         <a class="btn btn--primary" href="${esc(pretty(site.navCta.href))}">Book a demo</a>
@@ -425,8 +426,9 @@ ${trustBar(site)}
     </div>
     <div class="grid grid--3">
       ${product.capabilities.map((c) => `
-      <div class="card">
-        <h3 style="font-size:1rem">${esc(c.title)}</h3>
+      <div class="card cap-card">
+        ${actionArt(c.art)}
+        <h3 style="font-size:1.02rem">${esc(c.title)}</h3>
         <p class="small muted" style="margin:0">${esc(c.body)}</p>
       </div>`).join("")}
     </div>
