@@ -1,58 +1,46 @@
 {
-  "_comment": "Homeowner-facing questions. The site is now an introducer, so nothing here may say we survey, install or certify — those are the installer's actions. Keep the technical answers: they are what makes the page worth finding, and a homeowner who understands the job gives a better brief, which is the product we sell.",
+  "_comment": "The objections a sceptical tradesperson actually raises on a demo call, answered straight. Soft marketing answers here lose the sale — this audience has been sold to badly before and can smell it. Order matters: the AI-talking-to-my-customers fear comes first because it is the one that kills deals.",
 
   "faqs": [
     {
-      "q": "What does this cost me?",
-      "a": "Nothing, ever. Installers pay us for access to enquiries, which is how the service is funded. You are never charged, never asked for card details, and never under any obligation to accept a quote."
+      "q": "Is it going to talk rubbish to my customers?",
+      "a": "Not unless you let it. Every message goes to you first — you read it on your phone and tap approve before it sends. Most people leave that on for a fortnight, get bored of approving the obvious ones, and switch it off for routine replies while keeping it on for anything over a value they set. It only quotes from your price book, and when a job is unusual it stops and hands it to you rather than guessing. It is your name on the van and the software is built on that basis."
     },
     {
-      "q": "How many installers will contact me?",
-      "a": "Three at most, and often fewer. We cap it deliberately — the reason people dread comparison sites is being rung by eight firms for a fortnight. Your details go to those installers only. We do not sell them on, and if you change your mind we will withdraw the enquiry and tell everyone who received it."
+      "q": "I already use Tradify. Do I have to throw that out?",
+      "a": "No. Tradify, Jobber, ServiceM8 and Commusoft are job management — they run the work after you have won it. Foreman is the bit before: answering, qualifying, quoting and chasing. It sits in front of what you already use and passes the won jobs through. If you are happy with your job system, keep it."
     },
     {
-      "q": "How do you check the installers?",
-      "a": "Before a contractor receives a single enquiry we check their F-Gas company certificate, their REFCOM or equivalent registration, proof of public liability cover, their Companies House status and two recent customer references. We re-check the certificates every year and suspend anyone whose cover has lapsed. F-Gas matters more than it sounds: handling refrigerant without it is unlawful, and it voids the manufacturer warranty."
+      "q": "My quotes are too complicated for a computer to do",
+      "a": "Some of them will be, and Foreman should not try. It handles the work you price the same way every time — a standard boiler swap, a split in a normal room, a cassette into an existing grid — which for most trades is the majority by volume and nearly all of the quotes that go out late. Anything outside that, it writes up the brief and hands it to you. The aim is to clear the routine so you have evenings back for the jobs that genuinely need your head."
     },
     {
-      "q": "Do I need planning permission for air conditioning in London?",
-      "a": "Often not — but the exceptions are common in London. A system that both heats and cools counts as an air source heat pump, and installing one at a house is usually permitted development under Class G, provided it meets the conditions. The ones that catch people out: it cannot be a cooling-only unit; it cannot go on a pitched roof, and must sit back from the edge of a flat roof; it has to pass the MCS 020 sound calculation at your nearest neighbour's window, which is the condition that most often fails in a tight terrace; and on a house that isn't detached, only the first unit is permitted development. In a conservation area it cannot go on a wall or roof fronting a highway. A listed building needs listed building consent whatever else applies, and a flat will usually need freeholder or managing agent consent on top. Your installer will confirm the position for your property at the survey. Councils interpret the rules differently and the standards get tightened from time to time, so treat this as general guidance rather than legal advice and check with your own borough."
+      "q": "How long before it is actually doing something?",
+      "a": "About a week. You send your price list in whatever state it is in — a spreadsheet, a PDF, last year's quotes — and we build the price book with you. Then a divert on your number and a form on your site. There is no implementation project and no consultant."
     },
     {
-      "q": "What should I expect to pay?",
-      "a": "A single-room wall unit fitted is usually £1,800 to £2,600 depending on size and how far the pipework has to run. Two rooms on one outdoor unit is typically £3,400 upwards, and a concealed ducted system starts around £4,500 a zone. Our price guide breaks down every option, plus the extras that genuinely move a price — a condensate pump, a new electrical circuit, high-level access. Knowing the range is the best defence against a quote that is out of step."
+      "q": "I'm not technical",
+      "a": "You do not need to be. On site the entire interface is a text message: Foreman texts you a summary, you text back yes or no. The dashboard exists for when you are sat down with a coffee, and plenty of customers barely open it."
     },
     {
-      "q": "What happens after I send my details?",
-      "a": "We check the enquiry is complete and that it is inside an area our installers cover, then pass it to up to three of them. They contact you directly to arrange a survey — that survey is free and comes with no obligation. You compare the written quotes and deal directly with whichever installer you choose. We are not party to that contract."
+      "q": "What happens to my customer data and my prices?",
+      "a": "They stay yours. Your customer records and your price book are never used to train any model, never shared with another customer, and never sold. If you leave we export the lot and delete our copy. Ask us for that in writing and you will get it — it should be in the contract, not just on a web page."
     },
     {
-      "q": "Does air conditioning heat as well as cool?",
-      "a": "Every system worth fitting does both. In heating mode it is an air-to-air heat pump and genuinely efficient — typically three to four units of heat for each unit of electricity. Plenty of people use it in spring and autumn to warm one room rather than firing the boiler for the whole house. It also matters for planning: a cooling-only unit loses the permitted development route entirely."
+      "q": "Does this replace my office manager?",
+      "a": "No, and we would be wary of anyone who told you it did. It covers the hours they are not there — evenings, weekends, the heatwave week when the phone rings forty times — and it takes the chasing nobody enjoys off their desk. Firms that already have someone in the office usually find it makes that person better at the job, not redundant."
     },
     {
-      "q": "What does it cost to run?",
-      "a": "A 3.5 kW system cooling a living room draws roughly 0.8 to 1.0 kW once it has pulled the room down, so at around 25p per kWh that is about 20 to 25p an hour. Modern inverter units cost most in their first half hour and then settle. Heating tends to be cheaper per unit of heat than a gas boiler at current prices, though that depends on your tariff."
+      "q": "What if it does not work for me?",
+      "a": "Stop at the end of the month. No contract, no minimum term, no exit fee, and we export your data for you. We would rather lose a customer cleanly than keep one who tells every other trade in the area that we tied them in."
     },
     {
-      "q": "How noisy is it?",
-      "a": "Indoor units on the current ranges run from about 19 to 22 dB on quiet mode, below a whisper and quieter than most fridges. The outdoor unit is the one that matters for neighbours, typically around 46 to 50 dB at one metre. Position, anti-vibration mounts and the MCS 020 sound calculation are what keep that from becoming a problem, and a good installer will raise it before you have to."
+      "q": "Why is it £499 when other trade software is £50?",
+      "a": "Because it does a different job. Job-management software is a filing cabinet — it is cheap because it waits for you to put work into it. Foreman is closer to hiring someone to answer the phone and chase quotes, which costs a great deal more than £499 a month. The honest test is whether it wins you one extra job you would otherwise have lost. On a £2,800 average ticket, one a month is roughly five times what it costs."
     },
     {
-      "q": "How long does an installation take?",
-      "a": "A single-room system is normally one day with two engineers. Two or three rooms on a multi-split is usually two days. A concealed ducted system depends on access to the ceiling void and is quoted individually."
-    },
-    {
-      "q": "I live in a flat. Can I have air conditioning?",
-      "a": "Often, but the freeholder or managing agent decides, not us and not the installer. You will usually need written consent for anything fixed to the exterior, and many buildings set conditions on position and noise. Tell us it is a flat when you enquire and we will send it to installers who are used to dealing with managing agents — and who will tell you early if your block is likely to refuse."
-    },
-    {
-      "q": "Which areas do you cover?",
-      "a": "All of Greater London and the immediate M25 fringe. Coverage is denser in some boroughs than others, and if we do not yet have an installer who covers your postcode we will tell you straight away rather than leave you waiting."
-    },
-    {
-      "q": "What do you do with my details?",
-      "a": "We pass your name, contact details and what you have told us about the job to a maximum of three vetted installers so they can quote. That is the only thing we use them for. Installers are contractually barred from using your details for marketing, from passing them on, and from adding you to any mailing list. Ask us to withdraw your enquiry at any point and we will, and we will tell every installer who received it."
+      "q": "You are early access. What does that actually mean?",
+      "a": "It means the software works but it is young, you will find things we have not, and we will fix them faster than we ever will again. In return founding customers pay half price for as long as they stay, and we build around how you actually work. If you would rather wait for something finished, we will tell you when it is — that is a perfectly sensible choice and we will not chase you about it."
     }
   ]
 }

@@ -542,3 +542,112 @@ main { flex: 1 0 auto; }
 /* Long addresses in narrow footer columns must break rather than push the page
    wider — contractors@… is wider than its column at tablet widths. */
 .site-footer li, .site-footer a { overflow-wrap: anywhere; }
+
+/* ===================== Foreman: SaaS components ===================== */
+
+/* ---------- Stat cards ---------- */
+.stat-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 24px; box-shadow: var(--shadow); border-top: 3px solid var(--accent);
+}
+.stat-card b {
+  display: block; font-size: clamp(2.1rem, 1.4rem + 2vw, 2.9rem); font-weight: 750;
+  letter-spacing: -.035em; line-height: 1; color: var(--brand); font-variant-numeric: tabular-nums;
+}
+.stat-card .stat-label { font-weight: 650; margin: .5em 0 .4em; }
+
+/* ---------- Capability cards ---------- */
+.cap-card figure {
+  margin: 0 0 16px; padding: 10px; background: var(--bg-2);
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+}
+.cap-card figure .unit-art { max-height: 120px; }
+.cap-card h3 { display: flex; gap: 10px; align-items: baseline; }
+.cap-card h3 i {
+  font-style: normal; flex: 0 0 auto; display: grid; place-items: center;
+  width: 26px; height: 26px; border-radius: 50%; font-size: .8rem; font-weight: 750;
+  background: var(--brand); color: var(--on-brand);
+}
+
+/* ---------- Message thread ---------- */
+/* The product demo. Deliberately looks like a phone, because that is where the
+   buyer experiences it — not like a dashboard screenshot. */
+.thread, .mini-thread { display: grid; gap: 10px; }
+.thread {
+  max-width: 620px; margin: 0 auto; padding: 26px 22px;
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+.mini-thread { gap: 8px; margin-top: 14px; }
+.thread-meta {
+  text-align: center; font-size: .82rem; color: var(--muted); font-weight: 600;
+  margin: 10px 0 2px;
+}
+.msg {
+  padding: 11px 14px; border-radius: 16px; font-size: .95rem; line-height: 1.5;
+  max-width: 85%; position: relative;
+}
+.msg-who {
+  display: block; font-size: .72rem; font-weight: 700; letter-spacing: .03em;
+  text-transform: uppercase; opacity: .65; margin-bottom: 4px;
+}
+.msg--out {
+  background: var(--brand); color: var(--on-brand); margin-right: auto;
+  border-bottom-left-radius: 5px;
+}
+.msg--in {
+  background: var(--surface); border: 1px solid var(--line-strong); color: var(--ink);
+  margin-left: auto; border-bottom-right-radius: 5px;
+}
+.msg--event {
+  background: transparent; border: 1px dashed var(--line-strong); color: var(--muted);
+  font-size: .86rem; max-width: 100%; text-align: center; border-radius: var(--radius-sm);
+}
+.msg--won {
+  background: color-mix(in srgb, var(--good) 15%, transparent);
+  border: 1px solid var(--good); color: var(--ink);
+  max-width: 100%; text-align: center; font-weight: 650; border-radius: var(--radius-sm);
+}
+.mini-thread .msg { font-size: .86rem; padding: 9px 12px; }
+.link-ish { text-decoration: underline; text-underline-offset: 2px; opacity: .9; }
+
+/* ---------- ROI calculator ---------- */
+.roi {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 0;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg);
+}
+@media (max-width: 860px) { .roi { grid-template-columns: minmax(0, 1fr); } }
+.roi-controls { padding: 26px; display: grid; gap: 22px; align-content: start; }
+.roi-result {
+  padding: 26px; background: var(--bg-2); border-left: 1px solid var(--line);
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+@media (max-width: 860px) { .roi-result { border-left: 0; border-top: 1px solid var(--line); } }
+.roi-field label {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+  font-weight: 640; font-size: .94rem; margin-bottom: 8px;
+}
+.roi-field output {
+  font-weight: 750; color: var(--brand); font-variant-numeric: tabular-nums;
+  font-size: 1.05rem; white-space: nowrap;
+}
+.roi-field input[type="range"] { width: 100%; accent-color: var(--brand); margin: 0; }
+.roi-hint { display: block; font-size: .83rem; color: var(--muted); margin-top: 6px; }
+.roi-label {
+  font-size: .78rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--muted);
+}
+.roi-figure {
+  display: block; font-size: clamp(2rem, 1.3rem + 2.4vw, 2.8rem); font-weight: 750;
+  letter-spacing: -.035em; line-height: 1.05; margin: 4px 0 8px;
+  font-variant-numeric: tabular-nums;
+}
+.roi-figure--good { color: var(--good); }
+.roi-result hr { width: 100%; border: 0; border-top: 1px solid var(--line); margin: 18px 0; }
+.roi-verdict {
+  margin: 10px 0 18px; font-size: .95rem; padding: 10px 13px; border-radius: var(--radius-sm);
+  background: var(--bg-3); color: var(--ink-soft); width: 100%;
+}
+.roi-verdict--good { background: color-mix(in srgb, var(--good) 15%, transparent); color: var(--ink); }
+.roi-verdict--warn { background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--ink); }

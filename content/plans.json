@@ -1,0 +1,79 @@
+{
+  "_comment": "Pricing. £499 is the anchor the business was designed around; the tiers either side exist to make it the obvious choice rather than the only one. Prices exclude VAT. Founding-customer terms are a real commitment — half price for life is expensive to honour at scale, so decide deliberately before launch.",
+  "heading": "What it costs",
+  "lede": "Priced against what it wins you, not against other software. One extra job a month covers it several times over on most trades' average ticket.",
+  "note": "All prices exclude VAT. Monthly rolling — no setup fee, no contract, no minimum term.",
+  "foundingOffer": {
+    "headline": "Founding customers: half price, for as long as you stay",
+    "body": "We are taking a small number of trades onto Foreman while we build it around how they actually work. You get half price locked for life, a direct line to the people building it, and your problems at the top of the list. In exchange we want your honest opinion and, once it is working, your name."
+  },
+  "plans": [
+    {
+      "id": "solo",
+      "name": "Solo",
+      "price": 249,
+      "unit": "per month",
+      "spec": "One-van outfits and sole traders",
+      "cta": "Book a demo",
+      "includes": [
+        "Missed-call-to-text and instant web replies",
+        "Qualification questions for your trade",
+        "Quote follow-up and chasing",
+        "Up to 150 enquiries a month",
+        "Works entirely from your phone"
+      ]
+    },
+    {
+      "id": "crew",
+      "name": "Crew",
+      "price": 499,
+      "unit": "per month",
+      "spec": "Two to five engineers, the sweet spot",
+      "popular": true,
+      "cta": "Book a demo",
+      "includes": [
+        "Everything in Solo",
+        "AI quoting from your own price book",
+        "Call answering, out of hours and overflow",
+        "Survey booking straight into your diary",
+        "Up to five users and 500 enquiries a month",
+        "Integrations with your calendar and job system",
+        "Monthly report on what is actually winning work"
+      ]
+    },
+    {
+      "id": "multi",
+      "name": "Multi-crew",
+      "price": 999,
+      "unit": "per month",
+      "spec": "Several teams, branches or trades",
+      "cta": "Talk to us",
+      "includes": [
+        "Everything in Crew",
+        "Unlimited users and enquiries",
+        "Separate price books per branch or trade",
+        "Routing rules by postcode, job type and engineer",
+        "API access",
+        "A named person here, and a quarterly review"
+      ]
+    }
+  ],
+  "_roiComment": "Drives the calculator on /demo. Defaults are deliberately conservative — a calculator that flatters the buyer gets dismissed, and the honest numbers are already good enough.",
+  "roi": {
+    "heading": "Work out what the silence is costing you",
+    "lede": "Rough it out with your own numbers. Nothing is sent anywhere and nobody calls you about it.",
+    "defaults": {
+      "enquiries": 10,
+      "jobValue": 2800,
+      "winRate": 30,
+      "missed": 20
+    },
+    "assumptions": {
+      "lostShare": 0.6,
+      "recoveredShare": 0.5,
+      "note": "The model is deliberately pessimistic. Of the enquiries you never properly reply to, it assumes 40% come back to you anyway or were never real, so only 60% of the work you would have won is actually lost. Of that, it assumes Foreman recovers half, converting at the same rate as enquiries you already answer — in practice a fast reply converts better than a slow one, not the same. If the number still looks large, it is because the leak usually is."
+    }
+  },
+  "guaranteeHeading": "If it does not pay for itself, stop",
+  "guaranteeBody": "Monthly rolling, cancel at the end of any month, and we will export everything for you on the way out. We would rather you left than stayed on something that was not earning its keep — a trade who feels trapped tells every other trade in the area."
+}

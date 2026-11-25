@@ -1,358 +1,188 @@
-# Better Be Cool — website
+# Foreman — website
 
-Better Be Cool matches London homeowners and businesses with vetted air
-conditioning installers. Homeowners pay nothing. Installers pay a subscription
-for qualified leads, and that is the revenue.
+Foreman is an AI sales desk sold to trades: plumbers, heating engineers, air
+conditioning and HVAC contractors. It answers enquiries, qualifies them, quotes
+from the customer's own price book, chases until there is an answer, and books
+the survey. Subscription software, £249–£999 a month.
 
-It is a two-sided site, and the two sides want different things:
-
-- **Homeowners** are the traffic. The price guide, the ten area pages and the
-  FAQs exist to be found in search, because somebody researching what air
-  conditioning costs is exactly the enquiry we sell. The quote builder is the
-  qualification mechanism, not a quote request.
-- **Installers** are the customer. `/for-installers` carries the offer, the
-  plans and the application route.
-
-This is a standalone project. No framework, no build dependencies, no database
-and no server — `node build.mjs` turns the JSON in `content/` into a finished
-site in `public/`, and `public/` is what you deploy.
+This repository is the marketing site. No framework, no build dependencies, no
+database and no server — `node build.mjs` turns the JSON in `content/` into a
+finished site in `public/`, and `public/` is what deploys.
 
 ---
 
-## We are an introducer, not an installer
+## The rule that matters
 
-This is the rule the whole site hangs on, and the easiest way to get sued or
-reported is to forget it.
+**The product is in early access. Nothing here may claim a capability that is
+not built, and nothing may claim a result that has not been measured.**
 
-**Nothing on this site may claim that we install, hold F-Gas certification,
-employ engineers, or carry installer insurance.** Those belong to the
-contractors on the network. The site says what we *check*, never what we *hold*.
+`stage` in `content/site.json` is set to `early-access` and the copy is written
+for it — the founding-customer framing is not a growth hack, it is what lets the
+site be honest while the software is young. Flip it to `live` when it ships.
 
-| Never say | Say instead |
-|---|---|
-| "Our F-Gas certified engineers" | "Every installer is F-Gas certified — we check before they join" |
-| "We survey free" | "Your installer surveys free" |
-| "Our prices" | "Typical London prices, gathered from real quotes" |
-| "Our workmanship guarantee" | nothing — it is the installer's guarantee |
+Two specific traps:
 
-The price guide in `content/services.json` is market data to help a homeowner
-judge a quote. It is not an offer, and the structured data no longer marks it
-up as one.
+- **No outcome claims.** "Our customers win 32% more work" stays out until it is
+  measured on real accounts and you can show the working. A sceptical trade will
+  ask, and "it's just marketing" loses the deal.
+- **No integrations you have not built.** `content/product.json` lists
+  integration *categories* deliberately — "your job management system", not
+  named products. Name one you have not tested and the demo ends there.
 
-### Data protection is a launch blocker
-
-We pass personal data to third parties, so three things have to be true before
-this takes a real enquiry:
-
-1. The notice at the point of collection — `introducerNotice` in
-   `content/site.json`, shown in the quote builder and on the home page.
-2. `/privacy` — already written, but have a solicitor read it.
-3. **A written data-sharing agreement with every installer**, covering what they
-   may use a lead for and barring resale and marketing. Not drafted. The site
-   makes these promises on your behalf; the contract has to back them.
+The three statistics on the home page (`product.problems`) are industry-shaped
+framing, not measured claims about Foreman. Source them properly before launch
+or soften them to "most" and "often".
 
 ---
 
-## Before you launch## Before you launch — replace these
+## Before you launch
 
-The site is fully built, but four things are deliberately placeholders. Every
-one of them is in **`content/site.json`**.
-
-| Field | Currently | Why |
+| What | Where | Why |
 |---|---|---|
-| `phone` / `phoneHref` | `020 7946 0123` | Ofcom reserves `020 7946 0xxx` for fiction, so it can never ring a real person by accident. |
-| `whatsapp` | `447700900123` | Same — `07700 900xxx` is the reserved drama mobile range. |
-| `email` / `contractorEmail` | `hello@` and `contractors@betterbecool.co.uk` | You don't own the domain yet. |
-| `address` + `latitude`/`longitude` | A Herne Hill industrial estate | Your real trading address. The coordinates feed the map data Google reads. |
-
-Also review, because they are commitments you will be held to:
-
-- `credentials` in `content/site.json` — these now describe what we *check*,
-  not what we hold. Keep them that way, and make sure you actually do the
-  checking before the first lead goes out.
-- **The installer plan prices in `content/contractors.json` are a starting
-  proposal, not researched market rates.** £75 a lead, £349/mo for ten, £849/mo
-  for an exclusive territory. Sanity-check them against what a London AC
-  contractor will really pay before you publish.
-- The credit policy ("dead leads credited within 72 hours") and the sharing cap
-  ("three installers at most") are contractual promises. Make sure you can keep
-  them at volume.
-- `legalName` — set this once the company is registered at Companies House.
-
-There are **no customer reviews or testimonials anywhere on the site, and no
-star-rating markup**. That's deliberate: invented reviews are illegal under the
-Digital Markets, Competition and Consumers Act 2024, and fake `AggregateRating`
-markup gets a site penalised by Google. Collect real ones and add them then.
+| Product name | `content/site.json` → `name` | **"Foreman" is a placeholder.** Appears in the logo, titles, schema and every CTA. Changing it is this line plus `assets/logo.svg`. |
+| Phone / WhatsApp | `content/site.json` | Ofcom reserved drama numbers — they cannot reach a real person. A buyer evaluating £499/mo software *will* ring the number. |
+| Email and domain | `content/site.json` | `foreman.build` is not registered. |
+| Plan prices | `content/plans.json` | £249 / £499 / £999. The £499 anchor was the brief; the others exist to make it the obvious middle. |
+| Founding offer | `content/plans.json` | "Half price for as long as you stay" is expensive to honour at scale. Decide deliberately. |
+| DPA | — | See `/privacy`. The page makes commitments; a solicitor has to turn them into a document you can hand a cautious buyer. |
 
 ---
 
 ## Editing it
 
-Everything a non-developer needs to change is JSON in `content/`.
+Everything a non-developer changes is JSON in `content/`.
 
 | File | What's in it |
 |---|---|
-| `content/site.json` | Business name, phone, WhatsApp, email, address, hours, credentials, nav |
-| `content/services.json` | **The itemised catalogue** — every system, extra and service plan, with prices |
-| `content/areas.json` | The London areas that get their own page, and the local notes on each |
-| `content/faq.json` | The questions on the home page (these also become Google's FAQ markup) |
-| `content/gallery.json` | The illustrated gallery — what a good installation looks like |
-| `content/contractors.json` | **The installer offer** — plans, vetting, what "qualified" means |
+| `content/site.json` | Name, contact, stage, the trust points in the bar |
+| `content/product.json` | **The six capabilities**, the problem framing, the approval promise |
+| `content/plans.json` | Pricing, founding offer, and the ROI calculator's model |
+| `content/segments.json` | Per-trade pages at `/for-<slug>` |
+| `content/faq.json` | Objections — also becomes Google's FAQ markup |
 
-Change a price in `content/services.json` and it updates the pricing page, the
-area pages, the quote builder and the structured data Google reads — all from
-that one edit. There is no second place to keep in sync.
-
-Page wording lives in `build.mjs` (the page bodies) and `lib/templates.mjs`
-(the header, footer, quote builder and cards).
-
-### Build it
+Page wording lives in `build.mjs`; the header, footer and layout in
+`lib/templates.mjs`.
 
 ```bash
 node build.mjs          # writes public/
-```
-
-Node 18 or newer. No `npm install` — there are no dependencies.
-
-To preview locally:
-
-```bash
 npm run serve           # build, then http://localhost:8080
 npm run dev             # serve what's already built
 ```
 
-`serve.mjs` deliberately mirrors the two Vercel behaviours the site relies on —
-extensionless URLs and a real 404 page — so a link that works locally works in
-production. A plain file server would 404 on every internal link.
+Node 18 or newer. No `npm install` — there are no dependencies.
 
-The generated `public/` directory is committed, so a host that doesn't run a
-build step still serves the current site.
+---
+
+## The two things that sell it
+
+**The thread on `/demo`.** A missed call at 8:42pm becoming a booked survey,
+written as a text conversation. For this audience that is far more convincing
+than a dashboard screenshot, because texting is how they actually experience
+the product. It is hand-written in `build.mjs` (`thread()`) — keep it specific
+and keep it boring. Realistic beats impressive.
+
+**The ROI calculator on `/demo#roi`.** Four inputs a tradesperson knows off the
+top of their head, one number out.
+
+The model is deliberately pessimistic, and that is the point:
+
+- Of enquiries never properly answered, only **60%** of the work you would have
+  won counts as lost (`lostShare`) — some ring back, some were never real.
+- Of that, Foreman recovers **half** (`recoveredShare`), converting at the same
+  rate as enquiries already answered. In reality fast replies convert *better*.
+
+On the defaults that gives roughly £52k leaking, £26k recoverable, 4.4× the cost
+of the Crew plan. An earlier, looser model produced 25× — which is the kind of
+number that makes a buyer stop believing the rest of the page. If you adjust
+`content/plans.json`, keep it conservative for the same reason.
 
 ---
 
 ## Deploying — Vercel
 
-`vercel.json` already carries the whole configuration: build command, output
-directory, clean URLs and cache and security headers. You don't set anything in
-the dashboard.
-
-### Straight from your machine, no GitHub needed
+`vercel.json` carries the whole configuration: build command, output directory,
+clean URLs, cache and security headers. Nothing is set in the dashboard.
 
 ```bash
-npx vercel            # first run: log in, then answer the prompts
-npx vercel --prod     # publish to the live URL
+npx vercel --prod       # or push to main, which deploys itself
 ```
 
-The first run links the folder to a new Vercel project and gives you a preview
-URL; `--prod` promotes it. Re-run `npx vercel --prod` after any change. This is
-the fastest way to see it live, and it needs no repository at all.
-
-### From a Git repository (recommended once you're settled)
-
-Push this project to its own GitHub repo, then **Add New → Project** in Vercel
-and import it. Take every default — `vercel.json` supplies the rest. From then
-on, every push to `main` deploys itself, and every branch gets its own preview
-URL you can send to someone before it goes live.
-
-### Then
-
-Set `domain` in `content/site.json` to your real domain and redeploy. It's used
-for canonical URLs, the sitemap and the social preview card, all of which must
-be absolute. Add the domain under **Settings → Domains**; Vercel issues the
-HTTPS certificate itself.
+Set `domain` in `content/site.json` to the real domain once you have it — it
+feeds canonical URLs, the sitemap and the share card, all of which must be
+absolute.
 
 ### About the URLs
 
-`cleanUrls` is on, so pages are served at `/pricing` and
-`/areas/clapham-battersea` rather than `/pricing.html`. The generator emits
-links, canonicals and sitemap entries in that form, and `/pricing.html`
-permanently redirects to `/pricing`, so there's only ever one address per page
-for Google to index. Netlify and Cloudflare Pages do the same thing; a plain
-static host such as GitHub Pages does not, so if you ever move, either keep the
-extensions or check the new host supports it.
-
-### Domain
-
-Buy `betterbecool.co.uk` and point it at Vercel. A `.co.uk` reads as more
-trustworthy to UK customers than `.com` for a local trade, and it's a mild
-ranking signal for UK searches. Grab the `.com` too if it's free — it costs
-little and stops someone else trading on the name.
-
-The name doesn't contain "air conditioning" or "London", so it gives up the
-small boost an exact-match domain used to bring. That matters much less than
-it once did, and the site compensates where it counts: every page title, H1
-and area page carries the words people actually search for.
+`cleanUrls` is on, so pages serve at `/pricing` and `/for-plumbers` rather than
+`.html`. The generator emits links, canonicals and sitemap entries in that form
+and `/pricing.html` permanently redirects, so there is one address per page.
+`serve.mjs` mirrors that locally, which is why it exists instead of a plain file
+server.
 
 ---
 
-## How the site is set up to be found
+## Getting found
 
-This is the part that decides whether the phone rings, so it's worth knowing
-what's already done and what only you can do.
+Be realistic: **SEO is not how you sell this.** Trades do not search for "AI
+sales software" — they do not know it exists. The site is built to be the thing
+you point people at, not the thing that finds them.
 
-### Already built in
+What actually works for this product, in order:
 
-- **A page per area** — ten London areas, each with genuinely different copy
-  about that area's housing stock, councils and planning constraints. Ten
-  near-identical pages would be worse than one; these aren't.
-- **Structured data** — `HVACBusiness` with your address, hours, service area
-  and coordinates; a priced `OfferCatalog` of everything you sell; `FAQPage`
-  markup that can put your answers directly into search results;
-  `BreadcrumbList` on area pages.
-- **`sitemap.xml` and `robots.txt`**, regenerated on every build.
-- **Titles and meta descriptions** written per page around what people actually
-  search for ("air conditioning installation london", "air conditioning cost",
-  "air conditioning installers <area>").
-- **Speed** — one small CSS file, one small JS file, no fonts, no trackers, no
-  frameworks. Core Web Vitals are a ranking factor and this site is built to
-  pass them.
-- **Social preview image** at `assets/og-image.png`, so a shared link on
-  WhatsApp looks like a business rather than a bare URL.
-- **Mobile** — most trade searches are on a phone. Call and WhatsApp sit in a
-  fixed bar at the bottom of every page.
+1. **Outbound, by trade.** The four `/for-<trade>` pages exist so a cold email
+   can land on a page that describes that person's Tuesday, not a generic one.
+2. **Trade-to-trade referral.** Plumbers buy what other plumbers rate. The
+   founding-customer programme is a referral engine if you treat it as one.
+3. **Merchant and wholesaler partnerships.** Plumb Center, BSS, Wolseley branch
+   counters reach more trades in a week than any ad campaign.
+4. **Trade associations and shows** — CIPHE, the F-Gas and REFCOM lists,
+   InstallerSHOW.
+5. Search, eventually, on cost-shaped queries once there is something to rank.
 
-### What you have to do yourself
-
-In rough order of how much difference it makes:
-
-1. **Google Business Profile.** For a local trade this matters more than the
-   website. Free, at business.google.com. Verify the address, set the service
-   area to Greater London, pick "HVAC contractor" as the category, add photos of
-   real installations, and list your services. The map pack sits above the
-   normal results.
-2. **Reviews on that profile.** Ask every customer, on the day, while they're
-   pleased. Volume and recency both count. This is the single biggest lever
-   after having the profile at all.
-3. **Google Search Console** — verify the domain, submit
-   `https://yourdomain/sitemap.xml`. Then **Bing Webmaster Tools**, which also
-   feeds ChatGPT and Copilot search results.
-4. **Consistent name, address and phone** everywhere they appear — the site,
-   Google, Checkatrade, Yell, Facebook. Inconsistency actively hurts local
-   ranking, so decide the exact format once.
-5. **Trade directories and accreditation listings** — REFCOM and manufacturer
-   "find an installer" pages carry real weight because they're authoritative and
-   they link back to you.
-6. **Photos.** The one thing this site can't generate, and the thing that
-   converts a nervous homeowner faster than any amount of copy. Photograph
-   every job: the outdoor unit sited neatly, tidy trunking, the finished room,
-   the elevation from the street showing you can barely tell. Put them on the
-   area pages and the Google profile.
-
-   Until you have them the site draws its own pictures, and says so rather than
-   passing them off:
-
-   - **Price cards** carry a line drawing of each unit type
-     (`lib/illustrations.mjs`), tagged per item by the `art` field in
-     `content/services.json`.
-   - **The gallery** on the home page and every area page uses illustrated
-     room scenes (`lib/scenes.mjs`), listed in `content/gallery.json`.
-
-   **Swapping a real photo in takes one line.** Put the file in `assets/`, then
-   add `photo` and `alt` to that gallery entry:
-
-   ```json
-   { "scene": "living-room",
-     "photo": "/assets/clapham-living-room.jpg",
-     "alt": "A 3.5 kW wall unit above a sofa in a Victorian living room",
-     "title": "Living room, 3.5 kW wall unit",
-     "caption": "..." }
-   ```
-
-   The tile renders the photograph instead of the drawing; nothing else changes.
-   Shoot landscape at 4:3, save around 1200px wide, keep it under 300 KB. Once
-   every entry has a photo, delete the `note` line from `content/gallery.json` —
-   that's the sentence explaining the pictures are illustrations, and it should
-   come down when it stops being true.
-
-Add new areas by appending to `content/areas.json` — a page, sitemap entry and
-footer link are generated automatically. Write real local detail for each one.
-
----
-
-## The quote builder
-
-`assets/quote.js`, mounted on every `.quote-builder` on the page (the home
-page, the pricing page, every area page and the contact page).
-
-The customer picks systems, extras and service plans, sees a running "from"
-total, fills in their details, and sends the itemised list to you by **WhatsApp**
-or **email** — or copies it to the clipboard.
-
-Worth understanding: **there is no server and no form service.** The list is
-built in the customer's browser and stored only in their own `localStorage`, and
-it goes nowhere until they press a button, at which point it opens their own
-WhatsApp or email app with the message already written. That means:
-
-- Nothing to host, nothing to pay for, no GDPR processor agreement, no spam.
-- **You only receive an enquiry if the customer completes the send** in their
-  own app. If you later want submissions to land in a database or an inbox
-  automatically, add a form service (Formspree, Web3Forms, Netlify Forms) and
-  post `summaryText()` to it in `assets/quote.js` — that function already
-  produces the whole formatted enquiry.
-
-Deep links work: `/contact.html?item=split-35` opens the builder with that
-system already added. The "Add to my quote" buttons on the pricing cards use it.
+The `/demo` page is the asset all of those point at. Send the link, let the
+thread do the work.
 
 ---
 
 ## Files
 
 ```
-betterbecool/
+foreman/
 ├── build.mjs              # the generator — run this
 ├── serve.mjs              # local preview, behaves like Vercel
-├── vercel.json            # deploy config — build, clean URLs, headers
+├── vercel.json            # deploy config
 ├── content/               # everything you edit
-│   ├── site.json          #   business details
-│   ├── services.json      #   the priced catalogue
-│   ├── areas.json         #   London areas + local notes
-│   └── faq.json           #   FAQs (also become Google FAQ markup)
+│   ├── site.json
+│   ├── product.json
+│   ├── plans.json
+│   ├── segments.json
+│   └── faq.json
 ├── lib/
-│   ├── templates.mjs      # layout, header, footer, quote builder, cards
-│   ├── png.mjs            # PNG cropper for the generated images
-│   ├── og-image.html      # the social preview, rendered to PNG at build time
-│   └── icon-180.html      # the iOS home-screen icon, likewise
-├── assets/                # copied to public/assets
+│   ├── templates.mjs      # layout, header, footer, FAQ, CTA band
+│   ├── illustrations.mjs  # line drawings + the schematic backdrop
+│   ├── png.mjs            # PNG cropper for generated images
+│   ├── og-image.html      # the share card, rendered to PNG at build time
+│   └── icon-180.html      # the iOS icon, likewise
+├── assets/
 │   ├── styles.css         # the whole design system
-│   ├── quote.js           # the itemised quote builder
-│   ├── favicon.svg, logo.svg
+│   ├── roi.js             # the calculator
+│   └── logo.svg, favicon.svg, og-image.png, apple-touch-icon.png
 └── public/                # GENERATED — deploy this, don't edit it
 ```
 
-Anything in `public/` is overwritten on every build. Edit `content/`, `assets/`
-or `lib/` instead.
-
 ### Regenerating the images
 
-`assets/og-image.png` and `assets/apple-touch-icon.png` are rendered from
-`lib/*.html` with headless Chromium if it's installed, then cropped to size and
-copied into `public/` like any other asset. Both are committed as source, which
-matters: **Vercel's build machines have no Chromium**, so the build there keeps
-the committed images rather than shipping a site without them. Set
-`SKIP_IMAGES=1` to skip the step entirely.
-
-Edit `lib/og-image.html`, rebuild on a machine with Chrome or Chromium, and
-commit the regenerated PNG.
+`assets/og-image.png` and `assets/apple-touch-icon.png` render from `lib/*.html`
+with headless Chromium, then get cropped to size. Both are committed as source,
+which matters: **Vercel's builders have no Chromium**, so the build there keeps
+the committed images rather than shipping without them. `SKIP_IMAGES=1` skips
+the step.
 
 ---
 
-## A note on the planning-permission content
+## History
 
-The FAQ answers the planning question properly, because it is the first thing
-customers ask and most competitor sites are vague about it.
-
-The position it states: a system that heats as well as cools counts as an air
-source heat pump, so installing one at a house is usually permitted development
-under Class G of the GPDO — provided it is not cooling-only, is not on a pitched
-roof, passes the MCS 020 sound calculation at the nearest neighbour's window,
-and is the first unit on a house that isn't detached. Conservation areas bar a
-wall or roof fronting a highway; listed buildings need consent regardless; flats
-generally need freeholder consent as well.
-
-Being accurate here is worth more than being cautious. Telling a customer with
-an ordinary terrace that they probably need permission, when they probably do
-not, loses the job to whoever answered correctly.
-
-It is not legal advice, boroughs differ, and MCS 020 has been tightened before
-and will be again. The copy says so. Check the current position with the
-relevant council before telling a specific customer where they stand.
+This repository previously held two earlier businesses — an air conditioning
+installation company, then a lead-generation marketplace. Both are in the git
+history if the copy or the London-specific research is ever useful. The design
+system, the line drawings and the schematic backdrops carried across all three.

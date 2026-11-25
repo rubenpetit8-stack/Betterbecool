@@ -1,0 +1,58 @@
+{
+  "_comment": "Trade segment pages, generated at /for-<slug>. These replace the old London area pages and serve the same purpose: something specific enough that a buyer recognises their own working day in it. Generic 'for trades' copy converts nobody. Write each one as if you had spent a week in that van.",
+
+  "segments": [
+    {
+      "slug": "plumbers",
+      "name": "Plumbers",
+      "nav": "For plumbers",
+      "intro": "Half your enquiries are emergencies and the other half are bathrooms that have been thought about for a year. They need completely different handling, and both of them go to whoever picks up.",
+      "pain": "You are under a sink with your phone in the van.",
+      "notes": [
+        { "title": "Emergencies are won in minutes", "body": "A burst pipe calls down the list until someone answers. Foreman replies in under a minute, gets the postcode and the severity, and texts you a one-line summary so you can say yes or no without stopping what you are doing." },
+        { "title": "Bathrooms need chasing, not speed", "body": "A full bathroom quote is thought about for weeks. Three polite nudges over a fortnight, stopping the moment they reply, is the difference between that quote converting and going quiet — and nobody does it by hand." },
+        { "title": "It filters the ones that waste a morning", "body": "Tenant or owner, landlord's problem or theirs, is there stopcock access. The questions you would ask on the phone get asked before you have driven anywhere." }
+      ],
+      "jobs": ["Emergency callouts", "Bathroom installations", "Boiler and cylinder work", "Leak and repair work"]
+    },
+    {
+      "slug": "hvac",
+      "name": "HVAC contractors",
+      "nav": "For HVAC",
+      "intro": "Commercial work lives or dies on how fast a written quote lands. Facilities managers are collecting three, and the one that arrives on Tuesday beats the one that arrives the following week.",
+      "pain": "The quote is sat half-written on your laptop at home.",
+      "notes": [
+        { "title": "Same-day quotes on standard work", "body": "Cassettes into an existing grid, a server room unit, a TM44 inspection — priced from your own schedule of rates and out the same afternoon, branded as yours. The unusual jobs still come to you." },
+        { "title": "Service contracts that renew themselves", "body": "Foreman knows when each contract is up and starts the conversation six weeks out, with last year's figures attached. Renewals are the quietest money in the business and the easiest to let slip." },
+        { "title": "Statutory work nobody remembers", "body": "F-Gas leak checks and TM44 inspections run to fixed intervals. It tracks the dates across your whole book and chases the ones coming due, which is new work you already earned." }
+      ],
+      "jobs": ["Office fit-outs", "Service contracts", "F-Gas leak testing", "TM44 inspections", "Server room cooling"]
+    },
+    {
+      "slug": "air-conditioning",
+      "name": "Air conditioning installers",
+      "nav": "For AC installers",
+      "intro": "Your year is decided in about nine weeks. When it hits 28 degrees the phone does not stop, and every call you miss in May is a job someone else fits in June.",
+      "pain": "It is the first hot week and you are three days behind on quotes.",
+      "notes": [
+        { "title": "Survives the heatwave week", "body": "The week demand triples is the week you can least afford to answer the phone. Foreman handles all of it at once, qualifies each one, and queues the surveys in the order that makes sense for your diary rather than the order they rang." },
+        { "title": "Answers the planning question up front", "body": "Conservation area, listed, flat with a freeholder — the constraints that decide whether a job is real. Asked at enquiry, flagged on the brief, so you are not surveying jobs that were never going to happen." },
+        { "title": "Fills the winter", "body": "Every system you fit heats as well as cools, and almost no customer knows it. Foreman reheats last summer's unconverted quotes in October with that one line in it, which is a quieter season's work out of leads you already paid for." }
+      ],
+      "jobs": ["Domestic splits and multi-splits", "Ducted and concealed systems", "Annual servicing", "Commercial cassettes"]
+    },
+    {
+      "slug": "heating-engineers",
+      "name": "Heating engineers",
+      "nav": "For heating engineers",
+      "intro": "A boiler that has died is the most urgent purchase a household makes all year, and they will take the first firm that can tell them a price and a date.",
+      "pain": "Four voicemails and you have not stopped since seven.",
+      "notes": [
+        { "title": "A price and a date, immediately", "body": "Make, age, system type, flue position, room count. Enough for Foreman to give an honest range from your price book and get a survey in the diary before they ring the next firm." },
+        { "title": "Finance raised at the right moment", "body": "A failed boiler is an unbudgeted two to three thousand pounds. If you offer finance, Foreman mentions it when the price lands rather than three days later when they have already found someone cheaper." },
+        { "title": "Services that chase themselves", "body": "Every install becomes an annual service, and every annual service is a reminder nobody sends. It tracks the dates and books them, which turns a one-off job into a decade of revenue." }
+      ],
+      "jobs": ["Boiler replacements", "Annual services", "Landlord certificates", "System upgrades and power flushes"]
+    }
+  ]
+}
