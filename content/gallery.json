@@ -1,11 +1,8 @@
 {
   "_comment": "The work gallery. Each entry draws an illustration until you give it a real photo: put the file in assets/ and add \"photo\": \"/assets/your-file.jpg\" plus an \"alt\" describing it. The moment an entry has a photo it renders that instead, and the honesty note below should come down once they are all real. Captions describe how the work is done — never claim a job that did not happen, or a place it did not happen in.",
-
-  "heading": "What it looks like once it's in",
-  "lede": "The best air conditioning is the kind you stop noticing. Where the indoor unit goes, where the pipework runs and where the outdoor box ends up are the difference between a system that disappears into the room and one you resent looking at.",
-
-  "note": "These are illustrations, not photographs. We would rather draw what we fit than show you stock photos of somebody else's work — real pictures of our own installations replace them as the jobs come in.",
-
+  "heading": "What a good installation looks like",
+  "lede": "The best air conditioning is the kind you stop noticing. Where the indoor unit goes, where the pipework runs and where the outdoor box ends up are the difference between a system that disappears into the room and one you resent looking at. Worth knowing before you read a quote.",
+  "note": "These are illustrations rather than photographs — we're an introducer, so they aren't our jobs to photograph. They show what to look for and what to ask your installer about.",
   "items": [
     {
       "scene": "living-room",
@@ -20,7 +17,7 @@
     {
       "scene": "kitchen-extension",
       "title": "Kitchen extension, ceiling cassette",
-      "caption": "Set flush into the plasterboard, blowing to all four sides. Fitted while the ceiling was open, which is far cheaper than retrofitting it later."
+      "caption": "Set flush into the plasterboard, blowing to all four sides. Best fitted while the ceiling is open, which is far cheaper than retrofitting it later."
     },
     {
       "scene": "rear-elevation",
@@ -35,7 +32,7 @@
     {
       "scene": "office",
       "title": "Office floor, cassettes",
-      "caption": "Standard 600 mm cassettes into the existing grid, zoned so meeting rooms and open plan run independently. Installed outside trading hours."
+      "caption": "Standard 600 mm cassettes into the existing grid, zoned so meeting rooms and open plan run independently. Usually installed outside trading hours."
     }
   ]
 }

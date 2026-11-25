@@ -29,6 +29,7 @@ const services = read("services.json");
 const { areas, alsoCover } = read("areas.json");
 const { faqs } = read("faq.json");
 const gallery = read("gallery.json");
+const trade = read("contractors.json");
 
 const allItems = services.groups.flatMap((g) => g.items.map((i) => ({ ...i, group: g })));
 const itemById = Object.fromEntries(allItems.map((i) => [i.id, i]));
@@ -82,24 +83,24 @@ const homeBody = `
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">${esc(site.address.locality)} · Greater London &amp; the M25</span>
-      <h1>Air conditioning installed properly, anywhere in London</h1>
+      <h1>Air conditioning quotes from vetted London installers</h1>
       <p class="lede">${esc(site.description)}</p>
       <ul class="hero-points">
-        <li>${icon("check", 18)}<span>Prices published on this site — pick what you want and see the cost before you speak to anyone</span></li>
-        <li>${icon("check", 18)}<span>Free survey, then a fixed written price that doesn't move</span></li>
-        <li>${icon("check", 18)}<span>F-Gas certified engineers and our own Part P electricians</span></li>
-        <li>${icon("check", 18)}<span>Straight advice on planning permission before you spend anything</span></li>
+        <li>${icon("check", 18)}<span>Three quotes at most, never thirty — your details go no further</span></li>
+        <li>${icon("check", 18)}<span>Every installer F-Gas certified and insured, checked before they join</span></li>
+        <li>${icon("check", 18)}<span>Know what the work should cost before the first quote arrives</span></li>
+        <li>${icon("check", 18)}<span>Free for you, and no obligation to accept anything</span></li>
       </ul>
       <div class="btn-row">
-        <a class="btn btn--primary" href="#build">Build your quote</a>
-        <a class="btn btn--ghost" href="tel:${esc(site.phoneHref)}">${icon("phone")} ${esc(site.phone)}</a>
-        <a class="btn btn--ghost" href="https://wa.me/${esc(site.whatsapp)}">${icon("whatsapp")} WhatsApp</a>
+        <a class="btn btn--primary" href="#build">Tell us about the job</a>
+        <a class="btn btn--ghost" href="/pricing">See what it costs</a>
       </div>
+      <p class="small muted" style="margin-top:14px;max-width:54ch">${esc(site.introducerNotice)}</p>
     </div>
 
     <div class="hero-card">
       <h2>What people actually pay</h2>
-      <p class="small muted">Fitted, including VAT. Starting prices for a standard installation.</p>
+      <p class="small muted">Typical London prices, fitted and including VAT. Gathered from real quotes.</p>
       <table style="min-width:0">
         <tbody>
           ${popular.slice(0, 3).map((i) => `
@@ -142,7 +143,7 @@ ${trustBar(site)}
   <div class="wrap">
     <div class="narrow" style="margin-bottom:28px">
       <span class="eyebrow">Guide prices</span>
-      <h2>The three systems we fit most</h2>
+      <h2>The three systems London fits most</h2>
       <p class="lede">${esc(services.vatNote)} ${esc(services.guideNote)}</p>
     </div>
     <div class="grid grid--3">
@@ -178,15 +179,14 @@ ${gallerySection(gallery.items)}
   <div class="wrap">
     <div class="narrow" style="margin-bottom:28px">
       <span class="eyebrow">How it works</span>
-      <h2>From first message to a working system</h2>
-      <p class="lede">Most single-room installations are done within two weeks of your first call, and finished inside a day.</p>
+      <h2>From one message to three quotes</h2>
+      <p class="lede">You tell us once, rather than repeating yourself to five companies. Most people have quotes back within a few days.</p>
     </div>
     <ol class="steps">
-      <li><h3>You tell us the rooms</h3><p>Build a list on this site, send it on WhatsApp, or just call. Two minutes is enough.</p></li>
-      <li><h3>Free survey</h3><p>We measure the rooms, calculate the heat load properly, agree where the outdoor unit goes and check your electrics.</p></li>
-      <li><h3>Fixed written quote</h3><p>Itemised, valid for 60 days, with the planning position spelled out. No pressure and no charge if you walk away.</p></li>
-      <li><h3>Installation</h3><p>Two engineers, floors covered, one day for most single systems. Pressure tested, vacuumed and commissioned before we leave.</p></li>
-      <li><h3>Handover and aftercare</h3><p>Certificates, warranty registered in your name, controls explained, and a reminder when the first service is due.</p></li>
+      <li><h3>Tell us about the job</h3><p>Pick the rooms and the systems you are interested in. Two minutes, and the more you say the better the quotes that come back.</p></li>
+      <li><h3>We check it over</h3><p>We make sure the brief is complete and that we have installers covering your postcode. If we do not, we say so straight away rather than leave you waiting.</p></li>
+      <li><h3>Up to three installers get in touch</h3><p>Three at most. They arrange a free survey at a time that suits you, and quote in writing.</p></li>
+      <li><h3>You compare and choose</h3><p>Use the price guide to judge what lands. Pick one, or none — you are not committed to anything, and you never pay us.</p></li>
     </ol>
   </div>
 </section>
@@ -195,13 +195,13 @@ ${gallerySection(gallery.items)}
   <div class="wrap grid grid--2" style="align-items:start;gap:40px">
     <div>
       <span class="eyebrow">No surprises</span>
-      <h2>What's in every installation price</h2>
-      <p class="lede">This is the part cheap quotes leave out, then charge for on the day.</p>
+      <h2>${esc(services.includedHeading)}</h2>
+      <p class="lede">${esc(services.includedLede)}</p>
       <ul class="ticks">${services.includedInEvery.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
     </div>
     <div>
       <span class="eyebrow">Why us</span>
-      <h2>Credentials you can check</h2>
+      <h2>How this works for you</h2>
       <div class="grid" style="gap:12px">
         ${site.credentials.map((c) => `
         <div class="card" style="padding:16px">
@@ -209,7 +209,7 @@ ${gallerySection(gallery.items)}
           <p class="small muted" style="margin:0">${esc(c.detail)}</p>
         </div>`).join("")}
       </div>
-      <p class="small muted" style="margin-top:14px">We fit ${site.brands.slice(0, -1).map(esc).join(", ")} and ${esc(site.brands.slice(-1)[0])}, and we'll tell you which suits your property rather than which we have in the van.</p>
+      <p class="small muted" style="margin-top:14px">Installers on the network fit ${site.brands.slice(0, -1).map(esc).join(", ")} and ${esc(site.brands.slice(-1)[0])}. A good one recommends what suits your property, not what is in the van.</p>
     </div>
   </div>
 </section>
@@ -217,11 +217,11 @@ ${gallerySection(gallery.items)}
 <section class="section" id="build">
   <div class="wrap">
     <div class="narrow" style="margin-bottom:26px">
-      <span class="eyebrow">Itemised quote builder</span>
+      <span class="eyebrow">Tell us about the job</span>
       <h2>Pick exactly what you want</h2>
-      <p class="lede">Tick the rooms and any extras, see the running cost, then send the list straight to us on WhatsApp or by email. Nothing leaves your browser until you press send.</p>
+      <p class="lede">Tick the rooms and any extras and see roughly what it should cost. Send the list and up to three vetted installers quote on it. Nothing leaves your browser until you press send.</p>
     </div>
-    ${quoteBuilder()}
+    ${quoteBuilder(site)}
   </div>
 </section>
 
@@ -248,8 +248,8 @@ ${faqSection(faqs)}
 ${ctaBand(site)}`;
 
 page("index.html", {
-  title: `Air Conditioning Installation London | ${site.name}`,
-  description: "F-Gas certified air conditioning installation across London. Guide prices published up front, free survey, fixed written quote. Single rooms from £1,895 fitted.",
+  title: `Air Conditioning Quotes London — Vetted Installers | ${site.name}`,
+  description: "Compare air conditioning quotes from vetted London installers. Free, no obligation, three quotes at most. Published price guide so you know what the work should cost.",
   body: homeBody,
   jsonLd: [faqLd(faqs)],
   priority: 1.0
@@ -299,13 +299,13 @@ const pricingBody = `
     <div class="narrow">
       <span class="eyebrow">Itemised, in public</span>
       <h1>What air conditioning costs in London</h1>
-      <p class="lede">Every system, every optional extra and every service plan, with a starting price against it. Most installers make you ring up to find out. We'd rather you knew before you called.</p>
+      <p class="lede">Every system, every optional extra and every service plan, with a typical London price against it. Most installers make you ring up to find out. We would rather you walked into the conversation already knowing.</p>
       <div class="notice" style="margin:22px 0">
         <p><strong>${esc(services.vatNote)}</strong></p>
         <p class="small">${esc(services.guideNote)}</p>
       </div>
       <div class="btn-row">
-        <a class="btn btn--primary" href="/contact">Build an itemised quote</a>
+        <a class="btn btn--primary" href="/contact">Get quotes on this</a>
         <a class="btn btn--ghost" href="tel:${esc(site.phoneHref)}">${icon("phone")} ${esc(site.phone)}</a>
       </div>
     </div>
@@ -330,8 +330,8 @@ ${trustBar(site)}
 <section class="section section--tint" id="included">
   <div class="wrap narrow">
     <span class="eyebrow">Always included</span>
-    <h2>What every installation price covers</h2>
-    <p class="lede">If a cheaper quote doesn't list these, it isn't cheaper.</p>
+    <h2>${esc(services.includedHeading)}</h2>
+    <p class="lede">${esc(services.includedLede)}</p>
     <ul class="ticks" style="margin-top:18px">${services.includedInEvery.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
   </div>
 </section>
@@ -341,7 +341,7 @@ ${trustBar(site)}
     <div class="narrow" style="margin-bottom:22px">
       <span class="eyebrow">Optional extras</span>
       <h2>The things that can push a price up</h2>
-      <p class="lede">Not everyone needs any of these. We confirm which apply to you at the survey — before you commit, not on the day.</p>
+      <p class="lede">Not everyone needs any of these. A good installer confirms which apply at the survey — before you commit, not on the day.</p>
     </div>
     ${extrasTable(services.extras, { note: "Prices include VAT for homes. Business work is quoted excluding VAT." })}
   </div>
@@ -352,7 +352,7 @@ ${trustBar(site)}
     <div class="narrow" style="margin-bottom:22px">
       <span class="eyebrow">Aftercare</span>
       <h2>Servicing, warranty and repairs</h2>
-      <p class="lede">An annual service keeps the manufacturer warranty valid and stops the two faults that account for most callouts: a blocked drain and a filthy filter.</p>
+      <p class="lede">An annual service keeps the manufacturer warranty valid and heads off the two faults behind most callouts: a blocked drain and a filthy filter. Ask what each installer includes.</p>
     </div>
     ${extrasTable(services.care, { note: "Business systems above 5 tonnes CO₂ equivalent must be leak tested by law. We track your dates and remind you." })}
   </div>
@@ -363,15 +363,15 @@ ${trustBar(site)}
     <div class="narrow" style="margin-bottom:26px">
       <span class="eyebrow">Build it yourself</span>
       <h2>Put your own list together</h2>
-      <p class="lede">Add the rooms you want done, see the running total, and send the itemised list to us however you prefer.</p>
+      <p class="lede">Add the rooms you want done, see roughly what it should come to, and send it over for quotes.</p>
     </div>
-    ${quoteBuilder()}
+    ${quoteBuilder(site)}
   </div>
 </section>
 
 ${ctaBand(site, {
   heading: "Not sure which system you need?",
-  text: "That's what the free survey is for. Tell us the rooms and we'll tell you honestly what they need — including when the answer is that you don't need as much as you thought."
+  text: "That is what the survey is for. Tell us the rooms, and installers who know London property will tell you what they actually need — including when that is less than you thought."
 })}`;
 
 page("pricing.html", {
@@ -392,7 +392,7 @@ const areasBody = `
     <div class="narrow">
       <span class="eyebrow">Greater London &amp; the M25</span>
       <h1>Air conditioning installers across London</h1>
-      <p class="lede">We survey free anywhere inside the M25. Below are the areas we work in most often, with what we've learned about their housing stock, their councils and where the outdoor unit realistically goes.</p>
+      <p class="lede">Installers on the network cover everywhere inside the M25. Below are the areas we see the most enquiries from, with what we have learned about their housing stock, their councils and where the outdoor unit realistically goes.</p>
       <div class="btn-row" style="margin-top:18px">
         <a class="btn btn--primary" href="/contact">Get a free survey</a>
         <a class="btn btn--ghost" href="tel:${esc(site.phoneHref)}">${icon("phone")} ${esc(site.phone)}</a>
@@ -430,7 +430,7 @@ ${ctaBand(site)}`;
 
 page("areas.html", {
   title: `Air Conditioning Installers Across London | ${site.name}`,
-  description: "Air conditioning installation across all of Greater London — Clapham, Islington, Kensington, Richmond, Canary Wharf, Hackney, Wimbledon, Hampstead, Ealing and the City. Free surveys inside the M25.",
+  description: "Vetted air conditioning installers across all of Greater London — Clapham, Islington, Kensington, Richmond, Canary Wharf, Hackney, Wimbledon, Hampstead, Ealing and the City. Free surveys inside the M25.",
   body: areasBody,
   priority: 0.8
 });
@@ -476,10 +476,10 @@ for (const area of areas) {
       <h2>${esc(area.name)} at a glance</h2>
       <p class="small muted" style="margin-bottom:14px">${esc(area.property)}</p>
       <ul class="ticks small">
-        <li>Free survey — ${esc(area.name)} is inside our M25 area</li>
-        <li>F-Gas certified engineers and Part P electricians</li>
-        <li>Honest planning advice before you spend anything</li>
-        <li>Fixed written price, valid 60 days</li>
+        <li>Free survey — ${esc(area.name)} is inside our coverage</li>
+        <li>Installers checked for F-Gas, insurance and references</li>
+        <li>A straight answer on planning before you spend anything</li>
+        <li>Up to three written quotes to compare</li>
       </ul>
       <a class="btn btn--brand btn--block" style="margin-top:16px" href="/contact">Get my price</a>
     </div>
@@ -492,7 +492,7 @@ ${trustBar(site)}
   <div class="wrap">
     <div class="narrow" style="margin-bottom:24px">
       <span class="eyebrow">Local knowledge</span>
-      <h2>What we've learned installing in ${esc(area.name)}</h2>
+      <h2>What we have learned about ${esc(area.name)}</h2>
     </div>
     <div class="grid grid--3">
       ${area.notes.map((n) => `
@@ -508,7 +508,7 @@ ${trustBar(site)}
   <div class="wrap">
     <div class="narrow" style="margin-bottom:24px">
       <span class="eyebrow">Before you commit</span>
-      <h2>We settle the outdoor unit first</h2>
+      <h2>The outdoor unit gets settled first</h2>
       <p class="lede">It decides what you can have, what it costs and whether you need permission. We work it out at the free survey and tell you straight — including when the answer is that an application is unlikely to succeed.</p>
     </div>
     <figure class="diagram" style="margin:0">
@@ -545,10 +545,10 @@ ${local.length ? `
   <div class="wrap">
     <div class="narrow" style="margin-bottom:26px">
       <span class="eyebrow">Itemised quote</span>
-      <h2>Build your ${esc(area.name)} quote</h2>
+      <h2>Get ${esc(area.name)} quotes</h2>
       <p class="lede">Pick your rooms, add anything else you need, and send it over. We'll come back with a survey date.</p>
     </div>
-    ${quoteBuilder()}
+    ${quoteBuilder(site)}
   </div>
 </section>
 
@@ -584,8 +584,8 @@ const contactBody = `
   <div class="wrap">
     <div class="narrow">
       <span class="eyebrow">Three ways, all of them quick</span>
-      <h1>Get an itemised quote</h1>
-      <p class="lede">Build your list below and send it in one tap, or just call us. Whichever you pick, the next step is a free survey and a fixed written price.</p>
+      <h1>Get quotes from vetted installers</h1>
+      <p class="lede">Build your list below and send it in one tap. We pass it to up to three vetted London installers, who arrange a free survey and quote in writing. It costs you nothing.</p>
     </div>
     <div class="contact-methods" style="margin-top:26px">
       <a class="contact-method" href="tel:${esc(site.phoneHref)}">
@@ -610,7 +610,7 @@ const contactBody = `
 
 <section class="section" style="padding-top:10px">
   <div class="wrap">
-    ${quoteBuilder()}
+    ${quoteBuilder(site)}
   </div>
 </section>
 
@@ -619,11 +619,11 @@ const contactBody = `
     <div>
       <h2>Where we are</h2>
       <p>${esc(site.address.street)}<br>${esc(site.address.locality)} ${esc(site.address.postcode)}</p>
-      <p class="small muted">We're an installation business rather than a showroom, so please call before visiting. Surveys happen at your property and they're free anywhere inside the M25.</p>
+      <p class="small muted">We match you with installers rather than doing the work ourselves, so there is nothing to visit. Surveys happen at your property, arranged by the installer, and they are free.</p>
       <p><a href="/areas">See every area we cover →</a></p>
     </div>
     <div>
-      <h2>Before you call, it helps to know</h2>
+      <h2>Before you send it, it helps to know</h2>
       <ul class="ticks">
         <li>Roughly which rooms you want cooled, and their approximate size</li>
         <li>Whether it's a house or a flat — and if a flat, whether you own the freehold</li>
@@ -647,6 +647,214 @@ page("contact.html", {
     mainEntity: { "@id": site.domain + "/#business" }
   }],
   priority: 0.9
+});
+
+/* ================================================= for installers ========= */
+/* The paying side. Different audience, different objection: not "what does it
+   cost" but "I have been burned by lead sites before". The page answers that
+   first and asks for money last. */
+
+const planCard = (p) => `
+<article class="card price-card plan${p.price === 0 ? " plan--free" : ""}${p.popular ? " is-popular" : ""}">
+  ${p.price === 0 ? '<span class="tag">Start here</span>' : (p.popular ? '<span class="tag">Most take this</span>' : "")}
+  <h3>${esc(p.name)}</h3>
+  <p class="spec">${esc(p.spec)}</p>
+  <div class="price">
+    ${p.price === 0 ? "<b>Free</b>" : `<b>${money(p.price)}</b>`}
+    <span class="per">${esc(p.unit)}</span>
+  </div>
+  <ul class="ticks">${p.includes.map((i) => `<li>${esc(i)}</li>`).join("")}</ul>
+  <a class="btn btn--brand btn--sm" href="#apply">${esc(p.cta)}</a>
+</article>`;
+
+const installersBody = `
+<div class="wrap breadcrumb"><a href="/">Home</a> → For installers</div>
+
+<section class="hero" style="padding-top:30px">
+  ${schematicBackdrop()}
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">For air conditioning installers</span>
+      <h1>${esc(trade.heading)}</h1>
+      <p class="lede">${esc(trade.lede)}</p>
+      <div class="btn-row" style="margin-top:18px">
+        <a class="btn btn--primary" href="#apply">Get your first three free</a>
+        <a class="btn btn--ghost" href="#plans">See what it costs</a>
+      </div>
+      <p class="small muted" style="margin-top:14px">No setup fee, no contract, no commission on the job you win.</p>
+    </div>
+    <div class="hero-card">
+      <h2>What lands in your inbox</h2>
+      <p class="small muted">Every lead arrives with the full brief, already checked.</p>
+      <ul class="ticks small" style="margin-bottom:16px">
+        <li>Postcode, property type and tenure</li>
+        <li>Rooms, rough sizes and the systems they want</li>
+        <li>Budget band and timescale</li>
+        <li>Conservation area or listed flagged</li>
+        <li>A phone number we have already checked answers</li>
+      </ul>
+      <a class="btn btn--brand btn--block" href="#apply">Apply to join</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:26px">
+      <span class="eyebrow">Why this is different</span>
+      <h2>You have probably been burned by a lead site</h2>
+      <p class="lede">Most installers we speak to have paid for a shared lead, rung a dead number, and been fifth in the queue behind four other vans. All three of those are design decisions, and we made them differently.</p>
+    </div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))">
+      ${trade.why.map((w) => `
+      <div class="card card--flag">
+        <h3>${esc(w.title)}</h3>
+        <p class="small" style="margin:0">${esc(w.body)}</p>
+      </div>`).join("")}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="qualified">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:24px">
+      <span class="eyebrow">The product</span>
+      <h2>${esc(trade.qualifiedHeading)}</h2>
+      <p class="lede">${esc(trade.qualifiedLede)}</p>
+    </div>
+    <ul class="ticks lead-spec">${trade.qualified.map((q) => `<li>${esc(q)}</li>`).join("")}</ul>
+  </div>
+</section>
+
+<section class="section" id="plans">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:26px">
+      <span class="eyebrow">Pricing</span>
+      <h2>${esc(trade.plansHeading)}</h2>
+      <p class="lede">${esc(trade.plansNote)}</p>
+    </div>
+    <div class="grid grid--4">${trade.plans.map(planCard).join("")}</div>
+  </div>
+</section>
+
+<section class="section section--tint" id="vetting">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:26px">
+      <span class="eyebrow">Joining</span>
+      <h2>${esc(trade.processHeading)}</h2>
+      <p class="lede">We check every installer before they see a lead, and we re-check every year. It is the only reason a homeowner trusts what we send them — which is the only reason the leads are worth anything to you.</p>
+    </div>
+    <ol class="steps">
+      ${trade.process.map((p) => `<li><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></li>`).join("")}
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="apply">
+  <div class="wrap grid grid--2" style="gap:40px;align-items:start">
+    <div>
+      <span class="eyebrow">Apply</span>
+      <h2>Tell us where you work</h2>
+      <p class="lede">Send us your postcodes, the work you want and roughly how many leads a month you can handle. We will come back the same working day.</p>
+      <div class="contact-methods" style="margin-top:22px;grid-template-columns:1fr">
+        <a class="contact-method" href="mailto:${esc(site.contractorEmail)}?subject=${encodeURIComponent("Installer application")}">
+          <span class="ico">${icon("mail", 22)}</span>
+          <span><b>${esc(site.contractorEmail)}</b><span class="sub">The fastest way in — tell us your patch</span></span>
+        </a>
+        <a class="contact-method" href="tel:${esc(site.phoneHref)}">
+          <span class="ico">${icon("phone", 22)}</span>
+          <span><b>${esc(site.phone)}</b><span class="sub">${esc(site.hours[0].days)} ${esc(site.hours[0].open)}–${esc(site.hours[0].close)}</span></span>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h2>What we will ask for</h2>
+      <ul class="ticks">
+        <li>Your F-Gas company certificate</li>
+        <li>REFCOM registration, or an equivalent scheme</li>
+        <li>Proof of public liability cover</li>
+        <li>Your Companies House number</li>
+        <li>Two recent customer references we can call</li>
+      </ul>
+      <div class="notice" style="margin-top:20px">
+        <p class="small" style="margin:0"><strong>Straight answer on volume:</strong> ${esc(trade.faqs[3].a)}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+${faqSection(trade.faqs, {
+  eyebrow: "Installer questions",
+  heading: "What installers ask us",
+  lede: "The sceptical questions, answered properly. If yours is not here, ring and ask."
+})}
+
+${ctaBand(site, {
+  heading: "Start with three free leads",
+  text: "See the quality before you pay for anything. No card details, no rollover, no contract."
+})}`;
+
+page("for-installers.html", {
+  title: `Qualified Air Conditioning Leads for London Installers | ${site.name}`,
+  description: "Qualified air conditioning leads for London installers. Flat monthly fee, no commission on the job, a maximum of three installers per enquiry, and your first three leads free.",
+  body: installersBody,
+  jsonLd: [{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Lead generation for air conditioning installers",
+    provider: { "@id": site.domain + "/#business" },
+    areaServed: { "@type": "City", name: "London" },
+    audience: { "@type": "BusinessAudience", audienceType: "Air conditioning installation contractors" },
+    description: trade.lede,
+    offers: trade.plans.filter((p) => p.price > 0).map((p) => ({
+      "@type": "Offer",
+      name: p.name,
+      price: String(p.price),
+      priceCurrency: "GBP",
+      description: p.spec
+    }))
+  }],
+  priority: 0.9
+});
+
+/* ======================================================== privacy ========= */
+/* We pass personal data to third parties, so this is not optional furniture. */
+
+page("privacy.html", {
+  title: `Privacy — how we handle your details | ${site.name}`,
+  description: "What Better Be Cool does with the details you send: who receives them, what they may use them for, and how to have your enquiry withdrawn.",
+  priority: 0.3,
+  body: `
+<div class="wrap breadcrumb"><a href="/">Home</a> → Privacy</div>
+<section class="section" style="padding-top:26px">
+  <div class="wrap narrow">
+    <span class="eyebrow">Plain English</span>
+    <h1>What we do with your details</h1>
+    <p class="lede">${esc(site.introducerNotice)}</p>
+
+    <h2>What we collect</h2>
+    <p>Only what you type into the enquiry form: your name, phone number, email address, postcode, the rooms and systems you are interested in, your property type and your timescale. We do not run trackers, we do not use advertising cookies, and the quote builder keeps your list in your own browser until you press send.</p>
+
+    <h2>Who we share it with</h2>
+    <p>A maximum of three vetted installers, chosen because they cover your postcode and do the kind of work you have asked about. On some of our plans a single installer covers a postcode exclusively, in which case only they receive it. Nobody else gets your details. We do not sell them, and we do not pass them to insurers, finance companies or anyone else.</p>
+
+    <h2>What those installers may do with it</h2>
+    <p>Contact you about this job and quote for it. That is all. Our agreement with every installer bars them from using your details for marketing, from adding you to a mailing list, and from passing them to anyone else. If an installer breaks that, tell us and we will remove them.</p>
+
+    <h2>How long we keep it</h2>
+    <p>Two years from your enquiry, so we can resolve any dispute about work that came through us, then we delete it.</p>
+
+    <h2>Changing your mind</h2>
+    <p>Email <a href="mailto:${esc(site.email)}">${esc(site.email)}</a> and we will withdraw your enquiry, tell every installer who received it to delete your details, and confirm when it is done. You can also ask us for a copy of what we hold, or to correct it. You do not need a reason and there is no charge.</p>
+
+    <h2>Complaints</h2>
+    <p>Tell us first — we would rather fix it. If we have not put it right, you can complain to the Information Commissioner's Office at ico.org.uk.</p>
+
+    <div class="notice" style="margin-top:28px">
+      <p class="small" style="margin:0"><strong>Before launch:</strong> have a solicitor check this page and put a written data-sharing agreement in place with each installer. The commitments above are the ones the site makes on your behalf.</p>
+    </div>
+  </div>
+</section>`
 });
 
 /* ============================================================ 404 ========= */

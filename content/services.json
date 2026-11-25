@@ -1,17 +1,17 @@
 {
-  "_comment": "The itemised catalogue. Drives the pricing page, the quote builder and the structured data Google reads. Prices are GUIDE 'from' prices in GBP including VAT for homes. Set \"poa\": true instead of \"from\" for anything priced on survey.",
-  "vatNote": "All home prices include VAT at 20%. Business prices are shown excluding VAT.",
-  "guideNote": "These are genuine starting prices for a standard installation, not teasers. Your fixed price is confirmed in writing after a free survey - it only moves if your property needs something on the extras list below.",
+  "_comment": "The price guide. We are an introducer, so these are market guide prices gathered from real London quotes, never our own offers — nothing here may read as a price we are selling at. \"art\" picks the line drawing on the card (see lib/illustrations.mjs). Set \"poa\": true for anything priced on survey.",
+  "vatNote": "Typical London prices including VAT at 20%. Business work is normally quoted excluding VAT.",
+  "guideNote": "These are what the work costs across London, not our prices — we don't do the installs. Use them to judge the quotes you get: a number well under the range usually means something has been left out, and one well over deserves a question.",
   "includedInEvery": [
-    "Free site survey and a fixed written quote before anything is booked",
-    "Heat-load calculation so the unit is sized to the room, not guessed",
+    "A free site survey and a fixed written quote before anything is booked",
+    "A heat-load calculation, so the unit is sized to the room rather than guessed",
     "Supply of the indoor and outdoor units from a manufacturer-approved range",
     "Up to 5 metres of insulated refrigerant pipework, drain and interconnecting cable",
     "Core drilling, wall brackets and anti-vibration mounts for the outdoor unit",
-    "Connection to an existing suitable circuit, pressure test, vacuum and commissioning",
-    "F-Gas records, commissioning certificate and a walkthrough of the controls",
+    "Connection to a suitable circuit, pressure test, vacuum and commissioning",
+    "F-Gas records, a commissioning certificate and a walkthrough of the controls",
     "Dust sheets, floor protection and all waste taken away",
-    "Manufacturer warranty registered in your name, plus our 2-year workmanship guarantee"
+    "The manufacturer warranty registered in your name, plus a workmanship guarantee in writing"
   ],
   "groups": [
     {
@@ -46,7 +46,7 @@
             "The most-fitted size in London terraced and semi-detached homes",
             "Handles a knocked-through kitchen-diner or a large main bedroom",
             "Cooling and heating, with a typical running cost around 20-25p an hour",
-            "A++ or better seasonal efficiency on the ranges we fit"
+            "A++ or better seasonal efficiency on the ranges worth fitting"
           ]
         },
         {
@@ -130,7 +130,7 @@
     {
       "id": "concealed",
       "title": "Concealed and ducted",
-      "blurb": "Where a wall unit would spoil the room, the fan coil hides in a ceiling void, a loft or a cupboard, and all you see is a slim grille. This is what we fit most often in listed buildings and high-spec refurbishments.",
+      "blurb": "Where a wall unit would spoil the room, the fan coil hides in a ceiling void, a loft or a cupboard, and all you see is a slim grille. This is what gets fitted most often in listed buildings and high-spec refurbishments.",
       "items": [
         {
           "id": "ducted-zone",
@@ -247,7 +247,7 @@
       "name": "New dedicated 16 A circuit and RCBO",
       "price": 285,
       "unitLabel": "per system",
-      "note": "Required where your consumer unit has no suitable spare way. Part P certified."
+      "note": "Required where your consumer unit has no suitable spare way. Part P self-certified by the installer."
     },
     {
       "id": "cu-upgrade",
@@ -303,7 +303,7 @@
       "name": "Sound assessment for planning or permitted development",
       "price": 450,
       "unitLabel": "from",
-      "note": "An MCS 020 calculation is what permitted development requires; a fuller BS 4142 assessment is what a borough usually wants with an application. We tell you which you need."
+      "note": "An MCS 020 calculation is what permitted development requires; a fuller BS 4142 assessment is what a borough usually wants with an application. A good installer will tell you which you need."
     }
   ],
   "care": [
@@ -333,14 +333,14 @@
       "name": "5-year parts and labour warranty",
       "price": 0,
       "unitLabel": "included with a care plan",
-      "note": "Kept in force by the annual service. Most manufacturers require servicing to honour their own warranty anyway."
+      "note": "Kept in force by the annual service. Most manufacturers require servicing to honour their own warranty, so ask what the installer's plan covers."
     },
     {
       "id": "callout",
       "name": "Repair callout, first hour",
       "price": 145,
       "unitLabel": "per visit",
-      "note": "Waived if the fault turns out to be our workmanship, whatever the age of the install."
+      "note": "Typical first-hour rate. Most installers waive it where the fault is their own workmanship."
     },
     {
       "id": "leak-test",
@@ -349,5 +349,7 @@
       "unitLabel": "per system",
       "note": "Required by the F-Gas Regulation for systems above 5 tonnes CO2 equivalent."
     }
-  ]
+  ],
+  "includedHeading": "What a proper quote should include",
+  "includedLede": "If a cheaper quote doesn't list these, it isn't cheaper. Check each one before you compare numbers."
 }

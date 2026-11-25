@@ -1,24 +1,59 @@
 # Better Be Cool — website
 
-A complete, self-contained marketing site for an air conditioning installation
-business covering London. Static HTML, no framework, no dependencies, no
-database. It exists to do three things:
+Better Be Cool matches London homeowners and businesses with vetted air
+conditioning installers. Homeowners pay nothing. Installers pay a subscription
+for qualified leads, and that is the revenue.
 
-1. **Get found** — local SEO structure, one page per area, structured data
-   Google can read, and pages that load fast enough to rank.
-2. **Be easy to contact** — call, WhatsApp and email on every screen, plus a
-   sticky contact bar on mobile.
-3. **Show what you can buy** — every system, extra and service plan priced in
-   public, with an itemised quote builder that sends the customer's own list
-   straight to you.
+It is a two-sided site, and the two sides want different things:
 
-This is a standalone project. It has no framework, no build dependencies, no
-database and no server — `node build.mjs` turns the JSON in `content/` into a
-finished site in `public/`, and `public/` is what you deploy.
+- **Homeowners** are the traffic. The price guide, the ten area pages and the
+  FAQs exist to be found in search, because somebody researching what air
+  conditioning costs is exactly the enquiry we sell. The quote builder is the
+  qualification mechanism, not a quote request.
+- **Installers** are the customer. `/for-installers` carries the offer, the
+  plans and the application route.
+
+This is a standalone project. No framework, no build dependencies, no database
+and no server — `node build.mjs` turns the JSON in `content/` into a finished
+site in `public/`, and `public/` is what you deploy.
 
 ---
 
-## Before you launch — replace these
+## We are an introducer, not an installer
+
+This is the rule the whole site hangs on, and the easiest way to get sued or
+reported is to forget it.
+
+**Nothing on this site may claim that we install, hold F-Gas certification,
+employ engineers, or carry installer insurance.** Those belong to the
+contractors on the network. The site says what we *check*, never what we *hold*.
+
+| Never say | Say instead |
+|---|---|
+| "Our F-Gas certified engineers" | "Every installer is F-Gas certified — we check before they join" |
+| "We survey free" | "Your installer surveys free" |
+| "Our prices" | "Typical London prices, gathered from real quotes" |
+| "Our workmanship guarantee" | nothing — it is the installer's guarantee |
+
+The price guide in `content/services.json` is market data to help a homeowner
+judge a quote. It is not an offer, and the structured data no longer marks it
+up as one.
+
+### Data protection is a launch blocker
+
+We pass personal data to third parties, so three things have to be true before
+this takes a real enquiry:
+
+1. The notice at the point of collection — `introducerNotice` in
+   `content/site.json`, shown in the quote builder and on the home page.
+2. `/privacy` — already written, but have a solicitor read it.
+3. **A written data-sharing agreement with every installer**, covering what they
+   may use a lead for and barring resale and marketing. Not drafted. The site
+   makes these promises on your behalf; the contract has to back them.
+
+---
+
+## Before you launch## Before you launch — replace these
 
 The site is fully built, but four things are deliberately placeholders. Every
 one of them is in **`content/site.json`**.
@@ -27,16 +62,22 @@ one of them is in **`content/site.json`**.
 |---|---|---|
 | `phone` / `phoneHref` | `020 7946 0123` | Ofcom reserves `020 7946 0xxx` for fiction, so it can never ring a real person by accident. |
 | `whatsapp` | `447700900123` | Same — `07700 900xxx` is the reserved drama mobile range. |
-| `email` | `hello@betterbecool.co.uk` | You don't own the domain yet. |
+| `email` / `contractorEmail` | `hello@` and `contractors@betterbecool.co.uk` | You don't own the domain yet. |
 | `address` + `latitude`/`longitude` | A Herne Hill industrial estate | Your real trading address. The coordinates feed the map data Google reads. |
 
-Also review, because they are claims a customer can hold you to:
+Also review, because they are commitments you will be held to:
 
-- `credentials` in `content/site.json` — **F-Gas certification and REFCOM
-  registration are legal requirements, not marketing.** Don't publish them until
-  they're true. The same goes for the insurance figure and Part P.
+- `credentials` in `content/site.json` — these now describe what we *check*,
+  not what we hold. Keep them that way, and make sure you actually do the
+  checking before the first lead goes out.
+- **The installer plan prices in `content/contractors.json` are a starting
+  proposal, not researched market rates.** £75 a lead, £349/mo for ten, £849/mo
+  for an exclusive territory. Sanity-check them against what a London AC
+  contractor will really pay before you publish.
+- The credit policy ("dead leads credited within 72 hours") and the sharing cap
+  ("three installers at most") are contractual promises. Make sure you can keep
+  them at volume.
 - `legalName` — set this once the company is registered at Companies House.
-- Prices in `content/services.json` — see below.
 
 There are **no customer reviews or testimonials anywhere on the site, and no
 star-rating markup**. That's deliberate: invented reviews are illegal under the
@@ -55,7 +96,8 @@ Everything a non-developer needs to change is JSON in `content/`.
 | `content/services.json` | **The itemised catalogue** — every system, extra and service plan, with prices |
 | `content/areas.json` | The London areas that get their own page, and the local notes on each |
 | `content/faq.json` | The questions on the home page (these also become Google's FAQ markup) |
-| `content/gallery.json` | The "our work" gallery — captions now, your photographs later |
+| `content/gallery.json` | The illustrated gallery — what a good installation looks like |
+| `content/contractors.json` | **The installer offer** — plans, vetting, what "qualified" means |
 
 Change a price in `content/services.json` and it updates the pricing page, the
 area pages, the quote builder and the structured data Google reads — all from

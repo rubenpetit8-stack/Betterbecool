@@ -1,53 +1,58 @@
 {
-  "_comment": "These render on the home page AND become FAQPage structured data, which is how they can appear directly in Google results. Keep answers factual - Google demotes pages whose FAQ markup does not match visible text, and customers notice bluffing.",
+  "_comment": "Homeowner-facing questions. The site is now an introducer, so nothing here may say we survey, install or certify — those are the installer's actions. Keep the technical answers: they are what makes the page worth finding, and a homeowner who understands the job gives a better brief, which is the product we sell.",
+
   "faqs": [
     {
-      "q": "Do I need planning permission for air conditioning in London?",
-      "a": "Often not — but the exceptions are common in London, so we check your specific address before you commit to anything. A system that both heats and cools counts as an air source heat pump, and installing one at a house is usually permitted development under Class G, provided it meets the conditions. The ones that catch people out: it cannot be a cooling-only unit; it cannot go on a pitched roof, and must sit back from the edge of a flat roof; it has to pass the MCS 020 sound calculation at your nearest neighbour's window, which is the condition that most often fails in a tight terrace; and on a house that isn't detached, only the first unit is permitted development. In a conservation area it cannot go on a wall or roof fronting a highway. A listed building needs listed building consent whatever else applies, and a flat will usually need freeholder or managing agent consent on top. We tell you which of these applies to you at the free survey. Councils interpret the rules differently and the standards get tightened from time to time, so treat this as our working experience rather than legal advice and confirm the position with your own borough."
+      "q": "What does this cost me?",
+      "a": "Nothing, ever. Installers pay us for access to enquiries, which is how the service is funded. You are never charged, never asked for card details, and never under any obligation to accept a quote."
     },
     {
-      "q": "How long does an installation take?",
-      "a": "A single-room system is normally one day, start to finish, with two engineers. Two or three rooms on a multi-split is usually two days. A concealed ducted system depends on access to the ceiling void and is quoted individually. We give you the number of days in the written quote and we do not leave the job part-finished over a weekend."
+      "q": "How many installers will contact me?",
+      "a": "Three at most, and often fewer. We cap it deliberately — the reason people dread comparison sites is being rung by eight firms for a fortnight. Your details go to those installers only. We do not sell them on, and if you change your mind we will withdraw the enquiry and tell everyone who received it."
+    },
+    {
+      "q": "How do you check the installers?",
+      "a": "Before a contractor receives a single enquiry we check their F-Gas company certificate, their REFCOM or equivalent registration, proof of public liability cover, their Companies House status and two recent customer references. We re-check the certificates every year and suspend anyone whose cover has lapsed. F-Gas matters more than it sounds: handling refrigerant without it is unlawful, and it voids the manufacturer warranty."
+    },
+    {
+      "q": "Do I need planning permission for air conditioning in London?",
+      "a": "Often not — but the exceptions are common in London. A system that both heats and cools counts as an air source heat pump, and installing one at a house is usually permitted development under Class G, provided it meets the conditions. The ones that catch people out: it cannot be a cooling-only unit; it cannot go on a pitched roof, and must sit back from the edge of a flat roof; it has to pass the MCS 020 sound calculation at your nearest neighbour's window, which is the condition that most often fails in a tight terrace; and on a house that isn't detached, only the first unit is permitted development. In a conservation area it cannot go on a wall or roof fronting a highway. A listed building needs listed building consent whatever else applies, and a flat will usually need freeholder or managing agent consent on top. Your installer will confirm the position for your property at the survey. Councils interpret the rules differently and the standards get tightened from time to time, so treat this as general guidance rather than legal advice and check with your own borough."
+    },
+    {
+      "q": "What should I expect to pay?",
+      "a": "A single-room wall unit fitted is usually £1,800 to £2,600 depending on size and how far the pipework has to run. Two rooms on one outdoor unit is typically £3,400 upwards, and a concealed ducted system starts around £4,500 a zone. Our price guide breaks down every option, plus the extras that genuinely move a price — a condensate pump, a new electrical circuit, high-level access. Knowing the range is the best defence against a quote that is out of step."
+    },
+    {
+      "q": "What happens after I send my details?",
+      "a": "We check the enquiry is complete and that it is inside an area our installers cover, then pass it to up to three of them. They contact you directly to arrange a survey — that survey is free and comes with no obligation. You compare the written quotes and deal directly with whichever installer you choose. We are not party to that contract."
     },
     {
       "q": "Does air conditioning heat as well as cool?",
-      "a": "Every system we install does both. In heating mode it is an air-to-air heat pump, and it is genuinely efficient - typically three to four units of heat for each unit of electricity. Many customers use it in spring and autumn to avoid firing the boiler for the whole house when only one room is cold."
+      "a": "Every system worth fitting does both. In heating mode it is an air-to-air heat pump and genuinely efficient — typically three to four units of heat for each unit of electricity. Plenty of people use it in spring and autumn to warm one room rather than firing the boiler for the whole house. It also matters for planning: a cooling-only unit loses the permitted development route entirely."
     },
     {
       "q": "What does it cost to run?",
       "a": "A 3.5 kW system cooling a living room draws roughly 0.8 to 1.0 kW once it has pulled the room down, so at around 25p per kWh that is about 20 to 25p an hour. Modern inverter units cost most in their first half hour and then settle. Heating tends to be cheaper per unit of heat than a gas boiler at current prices, though that depends on your tariff."
     },
     {
-      "q": "How noisy is it, inside and out?",
-      "a": "Indoor units on the ranges we fit run from about 19 to 22 dB on quiet mode, which is below a whisper and quieter than most fridges. The outdoor unit is the one that matters for neighbours, typically around 46 to 50 dB at one metre. We position it away from boundaries and bedroom windows, mount it on anti-vibration fixings, and where a council or a neighbour is likely to raise it we get an acoustic assessment rather than argue afterwards."
+      "q": "How noisy is it?",
+      "a": "Indoor units on the current ranges run from about 19 to 22 dB on quiet mode, below a whisper and quieter than most fridges. The outdoor unit is the one that matters for neighbours, typically around 46 to 50 dB at one metre. Position, anti-vibration mounts and the MCS 020 sound calculation are what keep that from becoming a problem, and a good installer will raise it before you have to."
     },
     {
-      "q": "Why do you have to be F-Gas certified?",
-      "a": "Refrigerant is a potent greenhouse gas and UK law restricts who can handle it. Anyone installing, servicing or decommissioning a system must hold a personal F-Gas qualification, and the company must be certified as well. If an installer cannot produce both, the installation is unlawful, the manufacturer warranty will not stand, and your insurer may take a view on it. Ask any quote you receive for their certificate number, including ours."
-    },
-    {
-      "q": "How much mess does it make?",
-      "a": "Less than people expect. The main event is a 65 mm core drill through one external wall per indoor unit, which we do with a vacuum shroud. Floors are covered, furniture is sheeted, and we take the waste away. Where a front elevation is involved we offer making good and touching in as a priced extra, so you are not left with a patch."
+      "q": "How long does an installation take?",
+      "a": "A single-room system is normally one day with two engineers. Two or three rooms on a multi-split is usually two days. A concealed ducted system depends on access to the ceiling void and is quoted individually."
     },
     {
       "q": "I live in a flat. Can I have air conditioning?",
-      "a": "Often, but the freeholder or managing agent decides, not us. You will usually need written consent for anything fixed to the exterior, and many buildings set conditions on position and noise. We give you the specification and drawings to submit, and we are honest early if we think your block will refuse - it saves everyone a wasted survey."
+      "a": "Often, but the freeholder or managing agent decides, not us and not the installer. You will usually need written consent for anything fixed to the exterior, and many buildings set conditions on position and noise. Tell us it is a flat when you enquire and we will send it to installers who are used to dealing with managing agents — and who will tell you early if your block is likely to refuse."
     },
     {
-      "q": "What warranty do I get?",
-      "a": "The manufacturer warranty registered in your name, which is five years across most of the ranges we fit and seven on some, plus our own two-year guarantee on the installation work. Manufacturers require an annual service to honour their warranty, which is the main reason our care plan exists. Take the plan and we extend parts and labour cover to five years ourselves."
+      "q": "Which areas do you cover?",
+      "a": "All of Greater London and the immediate M25 fringe. Coverage is denser in some boroughs than others, and if we do not yet have an installer who covers your postcode we will tell you straight away rather than leave you waiting."
     },
     {
-      "q": "Are your prices really fixed?",
-      "a": "The quote is fixed. The guide prices on this site are honest starting points for a standard installation, and the survey turns one into a written fixed price. It only changes afterwards if you change the scope, or if something genuinely could not be seen at survey - and in that case we stop, explain it and get your agreement before doing the work."
-    },
-    {
-      "q": "Do you take away my old system?",
-      "a": "Yes. Old refrigerant has to be recovered by a certified engineer and disposed of through a licensed route, which is a priced line on the quote rather than something to fly-tip. You get the paperwork."
-    },
-    {
-      "q": "Which areas of London do you cover?",
-      "a": "All of Greater London and the immediate M25 fringe, from a base in SE24. Surveys are free within the M25. We publish detailed notes for the areas we work in most - Clapham and Battersea, Islington, Kensington and Chelsea, Richmond, Canary Wharf, Hackney, Wimbledon, Hampstead, Ealing and the City."
+      "q": "What do you do with my details?",
+      "a": "We pass your name, contact details and what you have told us about the job to a maximum of three vetted installers so they can quote. That is the only thing we use them for. Installers are contractually barred from using your details for marketing, from passing them on, and from adding you to any mailing list. Ask us to withdraw your enquiry at any point and we will, and we will tell every installer who received it."
     }
   ]
 }

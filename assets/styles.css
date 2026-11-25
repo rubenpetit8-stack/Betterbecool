@@ -398,7 +398,7 @@ input[aria-invalid="true"], select[aria-invalid="true"] { border-color: #c62828;
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--bg-2); border-top: 1px solid var(--line); padding: 46px 0 0; margin-top: auto; font-size: .94rem; }
-.footer-grid { display: grid; gap: 30px; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr); }
+.footer-grid { display: grid; gap: 30px 26px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 185px), 1fr)); }
 @media (max-width: 820px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
 .site-footer h4 { font-size: .8rem; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); margin-bottom: 1em; }
@@ -509,3 +509,36 @@ main { flex: 1 0 auto; }
 
 @media (max-width: 760px) { .backdrop { opacity: .34; } }
 @media (prefers-reduced-motion: no-preference) { .backdrop { transition: opacity .3s ease; } }
+
+/* ---------- Two-sided site: the installer entrance ---------- */
+/* Installers are the paying side but a minority of traffic, so the link sits
+   apart from the homeowner nav rather than competing with it. */
+.header-trade {
+  font-weight: 600; font-size: .92rem; text-decoration: none; color: var(--muted);
+  padding: .45em .7em; border-radius: 8px; border: 1px solid var(--line); white-space: nowrap;
+}
+.header-trade:hover { color: var(--brand); border-color: var(--brand); background: var(--brand-tint); }
+/* Between a small laptop and full width the nav, the trade link and the CTA
+   together overflow the bar. Drop the trade link there, and bring it back once
+   the nav itself is hidden — installers still need the door on a phone. */
+@media (max-width: 1100px) and (min-width: 941px) { .header-trade { display: none; } }
+@media (max-width: 620px) { .header-trade { display: none; } }
+
+/* Shown where a visitor is about to hand over their details. */
+.consent-note {
+  border-top: 1px solid var(--line); margin-top: 14px; padding-top: 13px; color: var(--muted);
+}
+.consent-note p { line-height: 1.5; }
+
+/* ---------- Installer plans ---------- */
+.plan { display: flex; flex-direction: column; position: relative; }
+.plan .price b { font-size: 1.7rem; }
+.plan--free { border-color: var(--good); box-shadow: 0 0 0 1px var(--good), var(--shadow); }
+.plan--free .tag { background: var(--good); }
+.lead-spec { columns: 2; column-gap: 34px; }
+.lead-spec li { break-inside: avoid; margin-bottom: 8px; }
+@media (max-width: 680px) { .lead-spec { columns: 1; } }
+
+/* Long addresses in narrow footer columns must break rather than push the page
+   wider — contractors@… is wider than its column at tablet widths. */
+.site-footer li, .site-footer a { overflow-wrap: anywhere; }

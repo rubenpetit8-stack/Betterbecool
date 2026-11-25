@@ -1,14 +1,22 @@
 {
-  "_comment": "EDIT ME FIRST. Everything here appears across every page of the site. The phone/mobile numbers below are Ofcom's official 'drama' numbers, reserved so they can never reach a real person - replace them before launch.",
+  "_comment": "EDIT ME FIRST. Better Be Cool is now an introducer, not an installer — it matches London homeowners and businesses with vetted air conditioning contractors, and contractors pay a subscription for the qualified leads. Nothing on the site may claim we install, hold F-Gas certification, or carry installer insurance: those belong to the contractors on the network. The phone numbers below are Ofcom's reserved 'drama' ranges so they can never reach a real person — replace them before launch.",
+
   "name": "Better Be Cool",
   "legalName": "Better Be Cool Ltd",
-  "tagline": "Air conditioning installed properly, across London",
-  "description": "F-Gas certified air conditioning installation for London homes and businesses. Fixed written quotes, guide prices published up front, most single-room systems fitted in a day.",
+  "tagline": "Air conditioning quotes from vetted London installers",
+  "description": "Tell us about the job once and up to three vetted London air conditioning installers come back to you with quotes. Free for homeowners, no obligation, and we publish what the work should cost before you speak to anyone.",
+
+  "contractorTagline": "Qualified air conditioning leads, on a flat monthly fee",
+  "contractorDescription": "Homeowners and businesses across London tell us exactly what they want fitted. We qualify every enquiry before it reaches you — postcode, property, rooms, budget and timescale — and you pay a flat subscription with no commission on the job.",
+
   "domain": "https://www.betterbecool.co.uk",
+
   "phone": "020 7946 0123",
   "phoneHref": "+442079460123",
   "whatsapp": "447700900123",
   "email": "hello@betterbecool.co.uk",
+  "contractorEmail": "contractors@betterbecool.co.uk",
+
   "address": {
     "street": "Unit 4, Bessemer Park, 250 Milkwood Road",
     "locality": "London",
@@ -18,79 +26,36 @@
     "latitude": 51.4543,
     "longitude": -0.1029
   },
+
   "hours": [
-    {
-      "days": "Monday to Friday",
-      "open": "07:30",
-      "close": "18:00"
-    },
-    {
-      "days": "Saturday",
-      "open": "08:00",
-      "close": "14:00"
-    }
+    { "days": "Monday to Friday", "open": "08:00", "close": "18:00" },
+    { "days": "Saturday", "open": "09:00", "close": "13:00" }
   ],
-  "hoursNote": "Emergency cover for business systems 24/7",
+  "hoursNote": "Enquiries answered the same working day",
+
+  "_credentialsComment": "These describe what WE do and what we check — not qualifications we hold. Keep it that way: claiming F-Gas certification when you do not install is a claim a customer can check and a competitor can report.",
   "credentials": [
-    {
-      "label": "F-Gas certified",
-      "detail": "Every engineer holds C&G 2079 - a legal requirement to handle refrigerant in the UK."
-    },
-    {
-      "label": "REFCOM registered",
-      "detail": "Company registration for refrigerant handling and record keeping."
-    },
-    {
-      "label": "Part P electrical",
-      "detail": "Our own electricians do the circuit work and self-certify it."
-    },
-    {
-      "label": "£5m public liability",
-      "detail": "Fully insured, with employers' liability cover for our engineers."
-    },
-    {
-      "label": "Manufacturer approved",
-      "detail": "Daikin, Mitsubishi Electric, Panasonic and LG trained and warranty-approved."
-    },
-    {
-      "label": "Free written quotes",
-      "detail": "Surveyed, itemised and fixed. No pressure, no obligation, no charge."
-    }
+    { "label": "Installers checked before they join", "detail": "F-Gas company certificate, REFCOM or equivalent registration, public liability cover and Companies House status — verified before a contractor sees a single lead." },
+    { "label": "Free for homeowners", "detail": "You never pay us anything. Contractors pay for access to the leads, which is how this works." },
+    { "label": "Three quotes, not thirty", "detail": "A maximum of three installers ever receive your details. Nobody else gets them, and we do not sell them on." },
+    { "label": "Prices published up front", "detail": "What the work actually costs in London, in public, so you can judge a quote before it arrives." },
+    { "label": "No obligation", "detail": "Compare the quotes, pick one or none. There is nothing to cancel and nothing to pay." },
+    { "label": "We re-check every year", "detail": "Certification lapses. We ask for current documents annually and suspend any contractor who cannot produce them." }
   ],
-  "brands": [
-    "Daikin",
-    "Mitsubishi Electric",
-    "Panasonic",
-    "LG",
-    "Toshiba",
-    "Samsung"
-  ],
-  "social": {
-    "google": "",
-    "facebook": "",
-    "instagram": "",
-    "linkedin": ""
-  },
+
+  "_introducerNotice": "Shown wherever a visitor is about to hand over their details. Legally this matters: we pass personal data to third parties, so the notice has to be visible at the point of collection, not buried.",
+  "introducerNotice": "Better Be Cool is an introducer, not an installer. We pass your name, contact details and what you have told us about the job to up to three vetted installers so they can quote. We do not carry out the work, we are not party to the contract you sign, and we never charge you.",
+
+  "brands": ["Daikin", "Mitsubishi Electric", "Panasonic", "LG", "Toshiba", "Samsung"],
+
+  "social": { "google": "", "facebook": "", "instagram": "", "linkedin": "" },
+
   "nav": [
-    {
-      "label": "What it costs",
-      "href": "/pricing.html"
-    },
-    {
-      "label": "Areas we cover",
-      "href": "/areas.html"
-    },
-    {
-      "label": "How it works",
-      "href": "/index.html#process"
-    },
-    {
-      "label": "Questions",
-      "href": "/index.html#faq"
-    },
-    {
-      "label": "Contact",
-      "href": "/contact.html"
-    }
-  ]
+    { "label": "What it costs", "href": "/pricing.html" },
+    { "label": "How it works", "href": "/index.html#process" },
+    { "label": "Areas we cover", "href": "/areas.html" },
+    { "label": "Questions", "href": "/index.html#faq" },
+    { "label": "Get quotes", "href": "/contact.html" }
+  ],
+  "navContractor": { "label": "For installers", "href": "/for-installers.html" }
 }
